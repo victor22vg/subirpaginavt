@@ -1,0 +1,667 @@
+/* Estilos base para toda la página */
+* {
+    box-sizing: border-box;
+    /* Incluye padding y border en el ancho total */
+    padding: 0;
+    /* Eliminamos padding por defecto */
+    margin: 0;
+    /* Eliminamos margin por defecto */
+
+}
+
+@keyframes spawn {
+    0% {
+        box-shadow: 0 0 0 var(--shadow);
+        /* Inicialmente sin sombra */
+        opacity: 0%;
+        /* Inicialmente completamente transparente */
+    }
+
+    100% {
+        box-shadow: 0 0 32px var(--shadow);
+        /* Aplica una sombra de 32px al final de la animación */
+        opacity: 100%;
+        /* Al final de la animación, el elemento será completamente visible */
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Hacemos que el desplazamiento sea suave */
+    animation: spawn 1.3s ease-in-out forwards;
+    /* Aplica una animación al body que se ejecuta en 1.3 segundos */
+}
+
+body,
+input,
+button {
+    font-family: var(--body-font);
+    /* Aplicamos la fuente del cuerpo */
+    font-size: var(--normal-font-size);
+    /* Aplicamos tamaño de fuente normal */
+}
+
+body {
+    background-color: var(--body-color);
+    /* Establecemos el color de fondo */
+    color: var(--text-color);
+    /* Establecemos el color del texto */
+}
+
+input,
+button {
+    border: none;
+    /* Eliminamos bordes por defecto en inputs y botones */
+    outline: none;
+    /* Eliminamos contornos al enfocar */
+}
+
+ul {
+    list-style: none;
+    /* Eliminamos viñetas de listas */
+}
+
+a {
+    text-decoration: none;
+    /* Eliminamos subrayado de enlaces */
+}
+
+img {
+    display: block;
+    /* Aseguramos que las imágenes sean elementos de bloque */
+    max-width: 100%;
+    /* Hacemos que las imágenes no excedan su contenedor */
+    height: auto;
+    /* Mantenemos la proporción de las imágenes */
+}
+
+/* Clase para contenedores */
+.container {
+    max-width: 1120px;
+    /* Establecemos un ancho máximo para el contenedor */
+    margin-inline: 1.5rem;
+    /* Espaciado lateral */
+}
+
+/* Clase principal de la página */
+.main {
+    position: relative;
+    /* Posicionamos elementos relativos a este contenedor */
+    height: 100vh;
+    /* Establecemos altura del 100% de la ventana */
+}
+
+/* Fondo principal */
+.main__bg {
+    position: absolute;
+    /* Posicionamos el fondo de manera absoluta */
+    top: 0;
+    /* Alineamos al top */
+    left: 0;
+    /* Alineamos a la izquierda */
+    width: 100%;
+    /* Ancho completo */
+    height: 100%;
+    /* Altura completa */
+    object-fit: cover;
+    /* Hacemos que la imagen cubra el contenedor */
+    object-position: center;
+    /* Centramos la imagen */
+    z-index: -1;
+    /* Colocamos el fondo detrás de otros elementos */
+}
+
+/* Estilos para las ventanas de búsqueda y login */
+.search,
+.login {
+    position: fixed;
+    /* Posicionamos estas secciones de manera fija */
+    left: 0;
+    /* Alineamos a la izquierda */
+    top: 0;
+    /* Alineamos al top */
+    width: 100%;
+    /* Ancho completo */
+    height: 100%;
+    /* Altura completa */
+    z-index: var(--z-modal);
+    /* Z-index para que aparezca sobre otros elementos */
+    background-color: hsla(230, 75%, 15%, .1);
+    /* Fondo semi-transparente */
+    backdrop-filter: blur(24px);
+    /* Efecto de desenfoque en el fondo */
+    -webkit-backdrop-filter: blur(24px);
+    /* Efecto de desenfoque para Safari */
+    padding: 8rem 1.5rem 0;
+    /* Espaciado interno */
+    opacity: 0;
+    /* Inicialmente invisible */
+    pointer-events: none;
+    /* Desactivamos eventos de puntero cuando está oculto */
+    transition: opacity .4s;
+    /* Animación de transición para la opacidad */
+}
+
+/* Botones de cierre para búsqueda y login */
+.search__close,
+.login__close {
+    position: absolute;
+    /* Posicionamos de forma absoluta en la ventana */
+    top: 2rem;
+    /* Alineamos 2rem desde la parte superior */
+    right: 2rem;
+    /* Alineamos 2rem desde la derecha */
+    font-size: 1.5rem;
+    /* Tamaño de fuente para el botón de cierre */
+    color: var(--title-color);
+    /* Color del texto para el botón de cierre */
+    cursor: pointer;
+    /* Cambiamos el cursor a puntero al pasar por encima */
+}
+
+/*=============== HEADER & NAV ===============*/
+/* Estilo para el encabezado que se mantiene fijo en la parte superior de la página */
+.header {
+    position: fixed;
+    /* Fija el encabezado en la parte superior */
+    top: 0;
+    /* Posición en la parte superior */
+    left: 0;
+    /* Posición a la izquierda */
+    width: 100%;
+    /* Ancho completo de la página */
+    background-color: var(--body-color);
+    /* Color de fondo del encabezado */
+    box-shadow: 0 2px 16px hsla(230, 75%, 32%, .15);
+    /* Sombra sutil debajo del encabezado */
+    z-index: var(--z-fixed);
+    /* Asegura que el encabezado esté sobre otros elementos */
+}
+
+/* Contenedor de navegación */
+.nav {
+    height: var(--header-height);
+    /* Altura definida en las variables CSS */
+    display: flex;
+    /* Usar flexbox para una disposición flexible */
+    justify-content: space-between;
+    /* Espaciado uniforme entre elementos */
+    align-items: center;
+    /* Alinear elementos verticalmente en el centro */
+}
+
+/* Estilo del logotipo en la navegación */
+.nav__logo {
+    color: var(--title-color);
+    /* Color del texto del logotipo */
+    font-weight: var(--font-semi-bold);
+    /* Peso de fuente semi-negrita */
+    transition: color .4s;
+    /* Suaviza el cambio de color */
+}
+
+/* Estilo para el logo en la navegación */
+.nav__logo img {
+    width: 250px;
+    /* Cambia el valor según el tamaño deseado */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+}
+
+
+/* Contenedor para las acciones de la navegación (como búsqueda y login) */
+.nav__actions {
+    display: flex;
+    /* Usar flexbox para el contenedor */
+    align-items: center;
+    /* Alinear elementos verticalmente en el centro */
+    column-gap: 1rem;
+    /* Espacio entre los elementos */
+}
+
+/* Estilo para íconos y botones de navegación */
+.nav__search,
+.nav__login,
+.nav__toggle,
+.nav__close {
+    font-size: 1.25rem;
+    /* Tamaño de fuente de los íconos */
+    color: var(--title-color);
+    /* Color del ícono */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el ícono */
+    transition: color .4s;
+    /* Suaviza el cambio de color al pasar el mouse */
+}
+
+/* Efecto hover para los elementos de navegación */
+:is(.nav__logo, .nav__search, .nav__login, .nav__toggle, .nav__link):hover {
+    color: var(--first-color);
+    /* Cambia el color al pasar el mouse */
+}
+
+/* Estilos de navegación para dispositivos móviles */
+@media screen and (max-width: 1023px) {
+    .nav__menu {
+        position: fixed;
+        /* Fija el menú en la pantalla */
+        top: -100%;
+        /* Oculta el menú fuera de la vista inicialmente */
+        left: 0;
+        /* Alinea el menú a la izquierda */
+        background-color: var(--body-color);
+        /* Color de fondo del menú */
+        box-shadow: 0 8px 16px hsla(230, 75%, 32%, .15);
+        /* Sombra para el menú */
+        width: 100%;
+        /* Ancho completo del menú */
+        padding-block: 4.5rem 4rem;
+        /* Espaciado interno del menú */
+        transition: top .4s;
+        /* Suaviza la transición al mostrar el menú */
+    }
+}
+
+/* Estilo de la lista de navegación */
+.nav__list {
+    display: flex;
+    /* Usar flexbox para disposición vertical */
+    flex-direction: column;
+    /* Elementos apilados verticalmente */
+    row-gap: 2.5rem;
+    /* Espacio entre los elementos de la lista */
+    text-align: center;
+    /* Centra el texto de los elementos */
+}
+
+/* Estilo para el contenedor del elemento "Contactanos" */
+.nav__item {
+    position: relative;
+    /* Establecer posición relativa para el elemento padre */
+}
+
+/* Estilos para el menú vertical dentro de "Contactanos" */
+.menu-vertical {
+    list-style-type: none;
+    /* Eliminar puntos de la lista */
+    padding: 0;
+    /* Eliminar padding */
+    margin: 0;
+    /* Eliminar margen */
+    position: absolute;
+    /* Posicionar de manera absoluta */
+    top: 100%;
+    /* Colocar debajo del enlace "Contactanos" */
+    left: 0;
+    /* Alinear a la izquierda */
+    display: none;
+    /* Ocultar por defecto */
+    background-color: var(--body-color);
+    /* Mismo fondo que el menú principal */
+    border: 1px solid var(--border-color);
+    /* Usar el color de borde consistente */
+    z-index: 1000;
+    /* Asegurarse de que esté encima de otros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    border-radius: 5px;
+    /* Bordes redondeados para un mejor aspecto */
+}
+
+/* Mostrar el submenú al pasar el mouse sobre "Contactanos" */
+.nav__item:hover .menu-vertical {
+    display: block;
+    /* Mostrar el submenú */
+}
+
+/* Estilos para los elementos del submenú */
+.menu-vertical li {
+    width: 100%;
+    /* Ancho completo para los elementos del submenú */
+}
+
+/* Estilos para los enlaces del submenú */
+.menu-vertical a {
+    display: block;
+    /* Hacer que el enlace ocupe todo el ancho */
+    padding: 10px;
+    /* Espaciado uniforme alrededor del texto */
+    color: var(--title-color);
+    /* Usar el mismo color de texto que los enlaces de navegación */
+    text-decoration: none;
+    /* Sin subrayado */
+    transition: background-color .4s, color .4s;
+    /* Suaviza la transición de fondo y color */
+}
+
+/* Cambiar el color del fondo y del texto al pasar el mouse sobre los enlaces del submenú */
+.menu-vertical a:hover {
+    background-color: rgba(11, 224, 240, 0.603);
+    /* Fondo al pasar el mouse */
+    color: var(--hover-color);
+    /* Cambia el color del texto al pasar el mouse */
+}
+
+/* Estilo de los enlaces de navegación */
+.nav__link {
+    color: var(--title-color);
+    /* Color del enlace */
+    font-weight: var(--font-semi-bold);
+    /* Peso de fuente semi-negrita */
+    transition: color .4s;
+    /* Suaviza el cambio de color al pasar el mouse */
+}
+
+/* Estilo para el botón de cierre del menú */
+.nav__close {
+    position: absolute;
+    /* Posiciona el botón en un lugar específico */
+    top: 1.15rem;
+    /* Distancia desde la parte superior */
+    right: 1.5rem;
+    /* Distancia desde la derecha */
+}
+
+/* Mostrar el menú cuando se activa la clase show-menu */
+.show-menu {
+    top: 0;
+    /* Coloca el menú en la vista */
+}
+
+/*=============== SEARCH ===============*/
+/* Estilo del formulario de búsqueda */
+.search__form {
+    display: flex;
+    /* Usar flexbox para disposición */
+    align-items: center;
+    /* Alinear elementos verticalmente en el centro */
+    column-gap: .5rem;
+    /* Espacio entre los elementos del formulario */
+    background-color: var(--container-color);
+    /* Color de fondo del formulario */
+    box-shadow: 0 8px 32px hsla(230, 75%, 15%, .2);
+    /* Sombra para el formulario */
+    padding-inline: 1rem;
+    /* Espaciado horizontal interno */
+    border-radius: .5rem;
+    /* Bordes redondeados */
+    transform: translateY(-1rem);
+    /* Mueve el formulario hacia arriba inicialmente */
+    transition: transform .4s;
+    /* Suaviza la transición al mostrar el formulario */
+}
+
+/* Estilo del ícono de búsqueda */
+.search__icon {
+    font-size: 1.25rem;
+    /* Tamaño de fuente del ícono */
+    color: var(--title-color);
+    /* Color del ícono */
+}
+
+/* Estilo del campo de entrada de búsqueda */
+.search__input {
+    width: 100%;
+    /* Ancho completo del campo */
+    padding-block: 1rem;
+    /* Espaciado vertical interno */
+    background-color: var(--container-color);
+    /* Color de fondo del campo */
+    color: var(--text-color);
+    /* Color del texto */
+}
+
+/* Estilo del placeholder del campo de entrada */
+.search__input::placeholder {
+    color: var(--text-color);
+    /* Color del texto del placeholder */
+}
+
+/* Mostrar el formulario de búsqueda cuando se activa la clase show-search */
+.show-search {
+    opacity: 1;
+    /* Aumenta la opacidad para hacerlo visible */
+    pointer-events: initial;
+    /* Permite la interacción con el formulario */
+}
+
+/* Estilo del formulario de búsqueda al mostrarse */
+.show-search .search__form {
+    transform: translateY(0);
+    /* Restablece la posición original del formulario */
+}
+
+/*=============== LOGIN ===============*/
+/* Estilo para el formulario de inicio de sesión y sus grupos */
+.login__form,
+.login__group {
+    display: grid;
+    /* Utiliza grid para la disposición de elementos */
+}
+
+/* Estilo del formulario de inicio de sesión */
+.login__form {
+    background-color: var(--container-color);
+    /* Color de fondo del formulario */
+    padding: 2rem 1.5rem 2.5rem;
+    /* Espaciado interno del formulario */
+    box-shadow: 0 8px 32px hsla(230, 75%, 15%, .2);
+    /* Sombra para darle profundidad */
+    border-radius: 1rem;
+    /* Bordes redondeados */
+    row-gap: 1.25rem;
+    /* Espacio entre las filas de elementos */
+    text-align: center;
+    /* Centra el texto dentro del formulario */
+    transform: translateY(-1rem);
+    /* Mueve el formulario hacia arriba inicialmente */
+    transition: transform .4s;
+    /* Suaviza la transición al mostrar el formulario */
+}
+
+/* Estilo del título del formulario de inicio de sesión */
+.login__title {
+    font-size: var(--h2-font-size);
+    /* Tamaño de la fuente del título */
+    color: var(--title-color);
+    /* Color del título */
+}
+
+/* Estilo para grupos dentro del formulario */
+.login__group {
+    row-gap: 1rem;
+    /* Espacio entre los elementos del grupo */
+}
+
+/* Estilo de las etiquetas de los campos de entrada */
+.login__label {
+    display: block;
+    /* Muestra la etiqueta como bloque */
+    text-align: initial;
+    /* Alinea el texto de la etiqueta al inicio */
+    color: var(--title-color);
+    /* Color de la etiqueta */
+    font-weight: var(--font-medium);
+    /* Peso de la fuente de la etiqueta */
+    margin-bottom: .25rem;
+    /* Espacio inferior de la etiqueta */
+}
+
+/* Estilo para los campos de entrada */
+.login__input {
+    width: 100%;
+    /* Ancho completo del campo */
+    background-color: var(--container-color);
+    /* Color de fondo del campo */
+    border: 2px solid var(--border-color);
+    /* Borde del campo */
+    padding: 1rem;
+    /* Espaciado interno del campo */
+    border-radius: .5rem;
+    /* Bordes redondeados del campo */
+    color: var(--text-color);
+    /* Color del texto dentro del campo */
+}
+
+/* Estilo del placeholder en los campos de entrada */
+.login__input::placeholder {
+    color: var(--text-color);
+    /* Color del texto del placeholder */
+}
+
+/* Estilo para el enlace de registro */
+.login__signup {
+    margin-bottom: .5rem;
+    /* Espacio inferior del enlace de registro */
+}
+
+/* Estilo del enlace dentro del registro */
+.login__signup a {
+    color: var(--first-color);
+    /* Color del enlace */
+}
+
+/* Estilo para el enlace de olvido de contraseña */
+.login__forgot {
+    display: inline-block;
+    /* Muestra como bloque en línea */
+    color: var(--first-color);
+    /* Color del enlace */
+    margin-bottom: 1.25rem;
+    /* Espacio inferior del enlace */
+}
+
+/* Estilo del botón de inicio de sesión */
+.login__button {
+    display: inline-block;
+    /* Muestra como bloque en línea */
+    background-color: var(--first-color);
+    /* Color de fondo del botón */
+    width: 100%;
+    /* Ancho completo del botón */
+    color: #fff;
+    /* Color del texto del botón */
+    font-weight: var(--font-semi-bold);
+    /* Peso de fuente semi-negrita */
+    padding: 1rem;
+    /* Espaciado interno del botón */
+    border-radius: .5rem;
+    /* Bordes redondeados del botón */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+    transition: box-shadow .4s;
+    /* Suaviza el cambio de sombra al pasar el mouse */
+}
+
+/* Efecto hover para el botón de inicio de sesión */
+.login__button:hover {
+    box-shadow: 0 4px 24px hsla(230, 75%, 40%, .4);
+    /* Aumenta la sombra al pasar el mouse */
+}
+
+/* Mostrar el formulario de inicio de sesión cuando se activa la clase show-login */
+.show-login {
+    opacity: 1;
+    /* Aumenta la opacidad para hacerlo visible */
+    pointer-events: initial;
+    /* Permite la interacción con el formulario */
+}
+
+/* Estilo del formulario de inicio de sesión al mostrarse */
+.show-login .login__form {
+    transform: translateY(0);
+    /* Restablece la posición original del formulario */
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* Estilos para dispositivos medianos */
+@media screen and (min-width: 576px) {
+
+    .search,
+    .login {
+        padding-top: 10rem;
+        /* Espaciado superior en dispositivos medianos */
+    }
+
+    /* Estilo del formulario de búsqueda */
+    .search__form {
+        max-width: 450px;
+        /* Ancho máximo del formulario de búsqueda */
+        margin-inline: auto;
+        /* Centra el formulario horizontalmente */
+    }
+
+    /* Estilo del botón de cierre en búsqueda y login */
+    .search__close,
+    .login__close {
+        width: max-content;
+        /* Ancho máximo del botón */
+        top: 5rem;
+        /* Distancia desde la parte superior */
+        left: 0;
+        /* Alinea el botón a la izquierda */
+        right: 0;
+        /* Alinea el botón a la derecha */
+        margin-inline: auto;
+        /* Centra el botón horizontalmente */
+        font-size: 2rem;
+        /* Tamaño de fuente del botón */
+    }
+
+    /* Estilo del formulario de inicio de sesión en dispositivos medianos */
+    .login__form {
+        max-width: 400px;
+        /* Ancho máximo del formulario de inicio de sesión */
+        margin-inline: auto;
+        /* Centra el formulario horizontalmente */
+    }
+}
+
+/* Estilos para dispositivos grandes */
+@media screen and (min-width: 1023px) {
+
+    /* Estilo de la barra de navegación */
+    .nav {
+        height: calc(var(--header-height) + 2rem);
+        /* Altura de la barra de navegación */
+        column-gap: 3rem;
+        /* Espacio entre columnas */
+    }
+
+    /* Oculta botones de cerrar y alternar en dispositivos grandes */
+    .nav__close,
+    .nav__toggle {
+        display: none;
+        /* No se muestra en dispositivos grandes */
+    }
+
+    /* Estilo del menú de navegación */
+    .nav__menu {
+        margin-left: auto;
+        /* Alinea el menú a la derecha */
+    }
+
+    /* Estilo de la lista de navegación */
+    .nav__list {
+        flex-direction: row;
+        /* Disposición horizontal de la lista */
+        column-gap: 3rem;
+        /* Espacio entre columnas */
+    }
+
+    /* Estilo del formulario de inicio de sesión en dispositivos grandes */
+    .login__form {
+        padding: 3rem 2rem 3.5rem;
+        /* Ajusta el espaciado interno */
+    }
+}
+
+/* Estilos para dispositivos muy grandes */
+@media screen and (min-width: 1150px) {
+
+    /* Estilo del contenedor */
+    .container {
+        margin-inline: auto;
+        /* Centra el contenedor horizontalmente */
+    }
+}

@@ -1,0 +1,517 @@
+.contenido-principal {
+    text-align: center;
+    /* Centra el texto dentro del contenedor para una presentación equilibrada */
+    padding: 30px;
+    /* Agrega un espacio interno para que el contenido no se sienta apretado */
+    background-color: #f9f9f9;
+    /* Color de fondo suave para un aspecto limpio y moderno */
+    border-radius: 10px;
+    /* Bordes redondeados para darle un toque más amigable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Añade una sombra sutil para un efecto de profundidad */
+    margin: 100px;
+    /* Margen alrededor del contenedor para separarlo de otros elementos en la página */
+}
+
+.botonSaberMas {
+    background-color: #063836;
+    /* Color de fondo del botón, un verde agradable */
+    border: none;
+    /* Eliminamos cualquier borde para un diseño limpio */
+    color: white;
+    /* Color del texto, blanco para buen contraste con el fondo */
+    padding: 15px 60px;
+    /* Espaciado interno, suficiente para que el botón sea cómodo de clicar */
+    text-align: center;
+    /* Alineamos el texto al centro del botón */
+    text-decoration: none;
+    /* Sin subrayado en el texto para un aspecto más moderno */
+    display: inline-block;
+    /* Permitimos que el botón se mantenga en línea con otros elementos */
+    font-size: 16px;
+    /* Tamaño de la fuente, fácil de leer */
+    font-weight: bold;
+    /* Texto en negrita para mayor énfasis */
+    border-radius: 8px;
+    /* Bordes redondeados para un diseño más suave */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Efectos de transición para un suave cambio de color y tamaño */
+    cursor: pointer;
+    /* Cambiamos el cursor a "pointer" para indicar que es clicable */
+    margin-bottom: 30px;
+    /* Espacio en la parte inferior del botón para separarlo de otros elementos */
+    margin-left: 0%;
+}
+
+.botonSaberMas:hover {
+    background-color: #688667;
+    /* Color al pasar el mouse */
+    transform: scale(1.1);
+    /* Agrandar ligeramente al pasar el mouse */
+}
+
+.botonSaberMas:active {
+    background-color: #a5bc8f;
+    /* Color al hacer clic */
+    transform: scale(0.98);
+    /* Disminuir ligeramente al hacer clic */
+}
+
+.contenedor-ods {
+    display: flex;
+    /* Usamos flexbox para alinear elementos en una fila de manera eficiente */
+    justify-content: space-between;
+    /* Espacia los elementos en el contenedor para que estén a ambos lados */
+    align-items: center;
+    /* Alinea verticalmente los elementos al centro */
+    max-width: 1200px;
+    /* Limita el ancho máximo para que el contenido no se extienda demasiado */
+    margin: 20px auto;
+    /* Margen automático para centrar el contenedor horizontalmente */
+}
+
+.imagen-ods1 img {
+    width: 350px;
+    /* Ajusta el tamaño según lo necesites */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    margin-right: 40px;
+}
+
+.texto-ods {
+    margin-right: 20px;
+    /* Agrega más espacio a la derecha del texto */
+}
+
+.imagen-ods1 {
+    margin-left: 20px;
+    /* Agrega más espacio a la izquierda del video */
+}
+
+.ods-container {
+    display: flex;
+    /* Usa flexbox para alinear los elementos */
+    justify-content: space-between;
+    /* Espacio entre los cuadros */
+    flex-wrap: wrap;
+    /* Permite que los elementos se ajusten en filas */
+    gap: 20px;
+    /* Espacio entre los cuadros */
+    padding: 20px;
+    /* Espacio interno del contenedor */
+}
+
+.ods-section {
+    background-color: #e1c2c23a;
+    /* Color de fondo claro para resaltar el cuadro */
+    border: 2px solid #d1d1d1;
+    /* Borde gris claro */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    padding: 20px;
+    /* Espacio interno */
+    width: 100%;
+    /* Ocupa todo el ancho del contenedor */
+    max-width: 1000px;
+    /* Ancho máximo del cuadro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave alrededor del cuadro */
+    font-family: Arial, sans-serif;
+    /* Fuente limpia para el texto */
+    box-sizing: border-box;
+    /* Incluye el padding en el ancho total del cuadro */
+    margin: 0 auto;
+    /* Centra el cuadro en pantallas más pequeñas */
+}
+
+/* Títulos */
+.ods-section h2 {
+    color: #000000;
+    /* Color del subtítulo */
+    font-size: 20px;
+    /* Tamaño del subtítulo */
+    text-align: center;
+    /* Centra el subtítulo */
+    margin-bottom: 20px;
+    /* Espacio debajo del subtítulo */
+}
+
+.ods-container {
+    display: flex;
+    /* Usa flexbox para alinear los elementos */
+    justify-content: space-between;
+    /* Ajusta el espacio entre los elementos */
+    flex-wrap: wrap;
+    /* Permite que los elementos se ajusten en la fila */
+    gap: 20px;
+    /* Espacio entre los elementos */
+    padding: 20px;
+    /* Espacio interno del contenedor */
+}
+
+.ods-section {
+    background-color: #FFFFFF;
+    /* Color de fondo del cuadro */
+    border: 0px solid #d1d1d1;
+    /* Borde gris claro */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    padding: 20px;
+    /* Espacio interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave alrededor del cuadro */
+    box-sizing: border-box;
+    /* Incluye el padding en el ancho total del cuadro */
+}
+
+.ods-section ul {
+    list-style-type: disc;
+    /* Usa discos como viñetas */
+    margin-left: 20px;
+    /* Margen izquierdo para alinear la lista */
+}
+
+.ods-section li {
+    color: #000000;
+    /* Color del texto en los elementos de la lista */
+    margin-bottom: 10px;
+    /* Espacio debajo de cada elemento de la lista */
+}
+
+.carrusel {
+    display: flex;
+    /* Usamos Flexbox para alinear elementos de manera eficiente */
+    align-items: center;
+    /* Centra verticalmente los elementos dentro del carrusel */
+    justify-content: center;
+    /* Centra horizontalmente los elementos dentro del carrusel */
+    overflow: hidden;
+    /* Oculta cualquier contenido que se desborde del contenedor */
+    width: 100%;
+    /* El carrusel ocupa todo el ancho de su contenedor */
+    height: 50vh;
+    /* La altura del carrusel es la mitad de la altura de la ventana */
+}
+
+.imagenes {
+    display: flex;
+    /* Usamos Flexbox para organizar las imágenes */
+    flex-direction: column;
+    /* Coloca las imágenes en una columna */
+    align-items: center;
+    /* Centra horizontalmente las imágenes dentro del contenedor */
+    justify-content: end;
+    /* Alinea las imágenes al final del contenedor */
+}
+
+.img {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.85);
+    /* Añade una sombra a la imagen para darle profundidad */
+    height: 576px;
+    /* Altura específica de la imagen */
+    width: 1134px;
+    /* Ancho específico de la imagen */
+    border-radius: 15px;
+    /* Bordes redondeados para un acabado suave */
+    margin: 5px;
+    /* Espaciado alrededor de cada imagen */
+    object-fit: cover;
+    /* Asegura que la imagen cubra todo el espacio asignado sin distorsionarse */
+    filter: saturate(175%);
+    /* Aumenta la saturación de los colores en la imagen */
+}
+
+.texto {
+    overflow: hidden;
+    /* Oculta el contenido que se desborda del contenedor de texto */
+    position: absolute;
+    /* Posiciona el texto de manera absoluta sobre las imágenes */
+    flex-direction: column;
+    /* Organiza el texto en una columna */
+    transform: translateY(0px);
+    /* Posición inicial del texto */
+    margin-bottom: 9px;
+    /* Espacio debajo del texto */
+    backdrop-filter: blur(20px);
+    /* Aplica un desenfoque de fondo al texto */
+    background-color: rgba(63, 106, 138, 0.21);
+    /* Color de fondo semitransparente para el texto */
+    display: flex;
+    /* Usamos Flexbox para alinear el texto */
+    align-items: center;
+    /* Centra horizontalmente el texto dentro del contenedor */
+    justify-content: center;
+    /* Centra verticalmente el texto dentro del contenedor */
+    border-radius: 30px;
+    /* Bordes redondeados para el contenedor de texto */
+}
+
+.texto h3 {
+    text-shadow: 0px 0px 15px black;
+    /* Sombra en el texto para darle más profundidad */
+    padding-top: 40px;
+    /* Espaciado en la parte superior del título */
+    color: white;
+    /* Color del texto */
+    font-weight: 300;
+    /* Peso de la fuente para el título */
+    font-size: 27px;
+    /* Tamaño de la fuente del título */
+}
+
+.texto p {
+    align-items: center;
+    /* Alinea el contenido del párrafo al centro */
+    padding: 20px;
+    /* Espaciado interno del párrafo */
+    color: white;
+    /* Color del texto */
+    font-size: 0px;
+    /* Inicialmente no se muestra el texto */
+    font-weight: 300;
+    /* Peso de la fuente para el párrafo */
+}
+
+.imagenes .texto {
+    width: 600px;
+    /* Ancho del contenedor de texto */
+    height: 100px;
+    /* Altura inicial del contenedor de texto */
+    transition: 1s;
+    /* Transición suave para cambios en las propiedades */
+}
+
+.imagenes:hover .texto {
+    transition: height 1s, transform 1s, background-color 1s;
+    /* Transiciones suaves al pasar el mouse */
+    transform: translateY(-150px);
+    /* Mueve el texto hacia arriba al pasar el mouse */
+    height: 300px;
+    /* Aumenta la altura del contenedor de texto al pasar el mouse */
+    background-color: rgba(63, 106, 138.71);
+    /* Cambia el color de fondo al pasar el mouse */
+}
+
+.imagenes:hover .texto p {
+    transition: font-size 0s, 2s linear;
+    /* Transición suave para el tamaño del texto */
+    font-size: 23px;
+    /* Aumenta el tamaño del texto al pasar el mouse */
+    font-weight: 300;
+    /* Peso de la fuente para el párrafo */
+    text-shadow: 0px 0px 10px #000000;
+    /* Sombra en el texto para mayor claridad */
+}
+
+.puntos {
+    display: flex;
+    /* Usamos Flexbox para alinear los puntos */
+    align-items: center;
+    /* Centra verticalmente los puntos */
+    justify-content: center;
+    /* Centra horizontalmente los puntos */
+}
+
+.puntos p {
+    font-size: 100px;
+    /* Tamaño grande para los puntos */
+    font-weight: 500;
+    /* Peso de la fuente para los puntos */
+    margin-top: -50px;
+    /* Ajuste del margen superior para centrar */
+    color: #000000;
+    /* Color del texto de los puntos */
+}
+
+.puntos .blod {
+    font-weight: 700;
+    /* Peso de la fuente más grueso para resaltar */
+    margin-left: 10px;
+    /* Espaciado a la izquierda */
+    margin-right: 10px;
+    /* Espaciado a la derecha */
+    color: #5E17EB;
+    /* Color del texto destacado */
+}
+
+.boton-desplegar {
+    display: block;
+    /* El botón ocupa todo el ancho disponible */
+    width: 30%;
+    /* Ancho por defecto en pantallas grandes */
+    padding: 15px 60px;
+    /* Espaciado interno del botón */
+    background-color: #063836;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto del botón */
+    border: none;
+    /* Sin borde visible */
+    border-radius: 5px;
+    /* Bordes redondeados para el botón */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+    text-align: center;
+    /* Centra el texto dentro del botón */
+    margin: 20px auto;
+    /* Margen superior e inferior centrado */
+}
+
+/* Estilo para el botón al pasar el mouse */
+.boton-desplegar:hover {
+    background-color: #688667;
+    /* Cambia a un color más oscuro al pasar el mouse */
+}
+
+/* Aquí comienzan retos y desafíos */
+
+h2 {
+    text-align: center;
+}
+
+.ods-container {
+    display: flex;
+    /* Usa flexbox para alinear los elementos */
+    justify-content: space-between;
+    /* Espacio entre los elementos */
+    flex-wrap: wrap;
+    /* Permite que los elementos se ajusten en filas */
+    gap: 20px;
+    /* Espacio entre los elementos */
+    padding: 20px;
+    /* Espacio interno del contenedor */
+}
+
+/* Estilo para cada nivel de reto o desafío */
+.nivel {
+    background-color: #67676d69;
+    /* Color de fondo con opacidad */
+    border: 2px solid #d1d1d1;
+    /* Borde gris claro */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    padding: 20px;
+    /* Espacio interno */
+    width: 30%;
+    /* Ajusta el ancho del contenedor del nivel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave alrededor del contenedor */
+    font-family: Arial, sans-serif;
+    /* Fuente limpia para el texto */
+    text-align: center;
+    /* Centra el texto */
+    box-sizing: border-box;
+    /* Incluye el padding en el ancho total */
+    height: 300px;
+    /* Altura fija del contenedor */
+}
+
+/* Estilo para el contenedor del carrusel */
+.carousel-container {
+    position: relative;
+    /* Posiciona el contenedor relativamente para que los elementos internos se posicionen en relación con él */
+    overflow: hidden;
+    /* Oculta cualquier contenido que desborde el contenedor */
+    width: 100%;
+    /* Ancho completo del contenedor */
+    height: 200px;
+    /* Ajusta según la altura de tus imágenes */
+}
+
+
+/* Estilo para el contenedor de los elementos del carrusel */
+.carousel-wrapper {
+    display: flex;
+    /* Usa flexbox para alinear los elementos del carrusel en una fila */
+    transition: transform 0.5s ease-in-out;
+    /* Transición suave para el movimiento del carrusel */
+}
+
+/* Estilo para cada elemento del carrusel */
+.carousel-item {
+    flex: 0 0 100%;
+    /* Cada elemento ocupa el 100% del ancho del contenedor */
+    height: 100%;
+    /* Altura completa del contenedor del carrusel */
+    display: flex;
+    /* Usa flexbox para centrar el contenido */
+    align-items: center;
+    /* Centra verticalmente el contenido */
+    justify-content: center;
+    /* Centra horizontalmente el contenido */
+}
+
+/* Estilo para las imágenes del carrusel */
+.carousel-item img {
+    width: 100%;
+    /* Ancho completo del contenedor del elemento */
+    height: 200px;
+    /* Altura fija, ajusta según lo necesario */
+    object-fit: cover;
+    /* Ajusta la imagen para cubrir el contenedor sin distorsionar */
+}
+
+.carousel-item img {
+    width: 100%;
+    /* Ancho completo del contenedor del elemento */
+    max-height: 200px;
+    /* Altura máxima, ajusta según lo necesario */
+    object-fit: cover;
+    /* Ajusta la imagen para cubrir el contenedor sin distorsionar */
+}
+.box-loading{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: none;
+}
+.loading {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+}
+.loading1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #f98705;
+    border-left-color: transparent;
+    border-bottom: none;
+    border-radius: 50%;
+    animation: loading_1 1s cubic-bezier(.17,.62,.87,.36) infinite;
+}
+.loading2 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 4px solid #d6a906;
+    border-right-color: transparent;
+    border-top: none;
+    border-radius: 50%;
+    left: calc(50% - 30px);
+    top: calc(50% - 30px);
+    animation: loading_2 1s cubic-bezier(.17,.62,.87,.36) infinite;
+}
+@keyframes loading_1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes loading_2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}

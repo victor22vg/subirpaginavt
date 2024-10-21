@@ -1,0 +1,421 @@
+/* Aquí empieza comienzos y origen */
+.contenido-principal {
+  text-align: center;
+  /* Centra el texto dentro del contenedor para una presentación equilibrada */
+  padding: 30px;
+  /* Agrega un espacio interno para que el contenido no se sienta apretado */
+  background-color: #f9f9f9;
+  /* Color de fondo suave para un aspecto limpio y moderno */
+  border-radius: 10px;
+  /* Bordes redondeados para darle un toque más amigable */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Añade una sombra sutil para un efecto de profundidad que hace que el contenido resalte */
+  margin: 100px;
+  /* Margen alrededor del contenedor para separarlo de otros elementos en la página, creando espacio */
+}
+
+.contenedor-historia {
+  text-align: center;
+  /* Alinea el texto al centro para mantener la uniformidad visual en la historia */
+}
+
+.h2-personalizado {
+  margin-top: 50px;
+  text-align: center;
+  /* Mantiene el encabezado centrado y con espacio adecuado arriba */
+  margin: 70px;
+  /* Espacio adicional para que el título destaque */
+}
+
+/* Contenedor principal para el texto y la imagen */
+.contenedor {
+  display: flex;
+  /* Usar flexbox para alinear horizontalmente el texto y la imagen */
+  align-items: flex-start;
+  /* Alinear el contenido al principio para una disposición ordenada */
+  justify-content: space-between;
+  /* Generar espacio entre el texto y la imagen para evitar que se sientan amontonados */
+  max-width: 90%;
+  /* Ancho máximo para asegurar que no se extienda demasiado en pantallas grandes */
+  margin: 20px 0;
+  /* Margen superior e inferior para separar el contenedor de otros elementos */
+  padding-left: 5%;
+  /* Asegura que el contenido no esté pegado al borde izquierdo */
+}
+
+/* Contenedor principal para la historia */
+.contenedor-historia-comienzo {
+  flex: 1;
+  /* Permite que este contenedor ocupe el espacio restante disponible */
+  margin-right: 20px;
+  /* Espacio a la derecha para separar el texto de la imagen */
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+
+  /* Cambios para pantallas pequeñas, asegurando que el diseño sea accesible en dispositivos móviles */
+  .contenido-principal {
+    margin: 50px 10px;
+    /* Reduce el margen en móviles para maximizar el espacio usable */
+    padding: 20px;
+    /* Reduce el padding en móviles para un aspecto más compacto */
+  }
+
+  .contenedor {
+    flex-direction: column;
+    /* Cambia a disposición vertical en móviles para una mejor lectura */
+    align-items: center;
+    /* Centra los elementos en la columna para un aspecto más ordenado */
+    padding-left: 0;
+    /* Elimina el padding izquierdo en móviles para evitar espacio innecesario */
+  }
+
+  .contenedor-historia-comienzo {
+    margin-right: 0;
+    /* Elimina el margen derecho en móviles para una alineación más limpia */
+    margin-bottom: 20px;
+    /* Añade margen inferior entre el texto y la imagen para un respiro visual */
+  }
+
+  .h2-personalizado {
+    margin: 30px;
+    /* Reduce el margen en móviles para mantener proporciones adecuadas */
+  }
+}
+
+/* Contenedor para las secciones */
+.contenedor-secciones {
+  display: flex;
+  /* Usar flexbox para alinear horizontalmente las secciones de manera uniforme */
+  justify-content: space-between;
+  /* Espacio entre las secciones para evitar que se vean amontonadas */
+  margin: 50px;
+}
+
+/* Contenedor para cada sección */
+.contenedor-historia-origen {
+  flex: 1;
+  /* Permitir que cada sección ocupe el mismo espacio, manteniendo la simetría */
+  margin: 0 10px;
+  /* Espacio horizontal entre las secciones para evitar que se toquen */
+  padding: 10px;
+  /* Espacio interno para que el contenido no esté pegado a los bordes */
+  background-color: #fff;
+  /* Fondo blanco para cada sección, brindando claridad visual */
+  border-radius: 5px;
+  /* Bordes redondeados para suavizar el aspecto */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Sombra para dar profundidad y un ligero efecto de elevación */
+  text-align: center;
+  /* Centrar el contenido dentro de cada sección para una presentación uniforme */
+}
+
+.imagen-ods {
+  width: 500px;
+  /* Ajusta el tamaño de la imagen según lo necesites; aquí está configurado para un ancho específico */
+  height: auto;
+  /* Mantiene la proporción de la imagen para que no se deforme */
+  animation: girar1 60s infinite linear;
+  /* Gira infinitamente cada 60 segundos de manera lineal, dando un efecto dinámico */
+  margin-right: 40px;
+  /* Espacio a la derecha para separar la imagen de otros elementos */
+}
+
+@keyframes girar1 {
+  from {
+    transform: rotate(0deg);
+    /* Comienza en 0 grados, es el punto de partida del giro */
+  }
+
+  to {
+    transform: rotate(360deg);
+    /* Gira 360 grados para completar un ciclo completo */
+  }
+}
+
+/* Estilo para párrafos dentro de contenedor-historia-origen */
+.contenedor-historia-origen p {
+  margin-bottom: 100px;
+  /* Espacio debajo del párrafo para que no esté pegado a otros elementos */
+}
+
+/* Estilos para imágenes centradas */
+.origen-img1,
+.origen-img2,
+.origen-img3 {
+  max-width: 60%;
+  /* Ancho máximo para las imágenes, evitando que sean demasiado grandes */
+  height: auto;
+  /* Mantiene la proporción de las imágenes para que no se deformen */
+  border-radius: 5px;
+  /* Bordes redondeados para un aspecto más amigable */
+  display: block;
+  /* Asegura que las imágenes se comporten como un bloque para el centrado */
+  margin: 0 auto;
+  /* Centrarlas horizontalmente dentro de su contenedor */
+}
+
+/* Opcional: ajustar cada imagen si deseas tamaños específicos */
+.origen-img2 {
+  max-width: 50%;
+  /* Cambia el ancho máximo para esta imagen específica */
+}
+
+.origen-img3 {
+  max-width: 100%;
+  /* Cambia a 100% para que no exceda el contenedor en dispositivos pequeños */
+}
+
+/* Aquí empieza el diseño responsivo */
+@media screen and (max-width: 768px) {
+  .contenedor-secciones {
+    flex-direction: column;
+    /* Cambia a disposición en columna en pantallas pequeñas para mejor legibilidad */
+    margin: 20px;
+    /* Reduce el margen en móviles para aprovechar mejor el espacio */
+  }
+
+  .contenedor-historia-origen {
+    margin: 10px 0;
+    /* Ajusta el margen entre secciones para una presentación más compacta */
+  }
+
+  .imagen-ods {
+    width: 100%;
+    /* La imagen ocupa el 100% en pantallas pequeñas para adaptarse mejor */
+    margin-right: 0;
+    /* Elimina el margen derecho para evitar espacio innecesario */
+  }
+
+  /* Ajusta las imágenes dentro de las secciones */
+  .origen-img1,
+  .origen-img2,
+  .origen-img3 {
+    max-width: 80%;
+    /* Aumenta el tamaño máximo en móviles para una mejor visualización */
+  }
+}
+
+/* Aquí empieza la sección de importancia */
+.importancia-ods {
+  max-width: 800px;
+  /* Establece un ancho máximo para mantener la consistencia visual */
+  margin: 0 auto;
+  /* Centra el contenedor en la página */
+  padding: 20px;
+  /* Espacio interno para que el contenido no esté pegado a los bordes */
+  background-color: #f9f9f9;
+  /* Fondo suave para un aspecto amigable y moderno */
+  border-radius: 10px;
+  /* Bordes redondeados para suavizar el diseño */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra para dar profundidad y un efecto de elevación */
+}
+
+.importancia-ods h2 {
+  margin: 20px auto;
+  /* Espacio en la parte superior e inferior del encabezado para darle importancia */
+  text-align: center;
+  /* Centra el texto del encabezado para una presentación equilibrada */
+}
+
+.video-importancia {
+  display: flex;
+  /* Usa flexbox para centrar el video dentro de su contenedor */
+  justify-content: center;
+  /* Centra el video horizontalmente */
+}
+
+iframe {
+  margin: 20px;
+  /* Espacio alrededor del video para que no esté pegado a otros elementos */
+  max-width: 100%;
+  /* Asegura que el video no exceda el ancho del contenedor */
+  border-radius: 10px;
+  /* Bordes redondeados para el video, haciéndolo más amigable visualmente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra para el video, proporcionando un efecto de profundidad */
+}
+
+/* Aquí termina la sección de importancia */
+
+/* Aquí comienza la línea de tiempo */
+
+.linea-tiempo-ods {
+  max-width: 900px;
+  /* Establece un ancho máximo para la línea de tiempo, asegurando que no se expanda demasiado */
+  margin: 25px auto;
+  /* Centra la línea de tiempo en la página y añade un margen superior e inferior */
+  padding: 20px;
+  /* Espacio interno para evitar que el contenido esté pegado a los bordes */
+  background-color: #f9f9f9;
+  /* Color de fondo suave para un diseño agradable */
+  border-radius: 10px;
+  /* Bordes redondeados para un aspecto más amigable */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra para dar un efecto de profundidad */
+}
+
+.linea-tiempo-ods h2 {
+  text-align: center;
+  /* Centra el encabezado de la línea de tiempo */
+  margin-bottom: 40px;
+  /* Espacio debajo del encabezado para separar del contenido */
+}
+
+.linea-tiempo {
+  position: relative;
+  /* Posición relativa para manejar los elementos dentro de la línea de tiempo */
+  margin: 20px 0;
+  /* Espacio superior e inferior para separar la línea de tiempo de otros elementos */
+  padding-left: 40px;
+  /* Espacio a la izquierda para permitir la línea vertical */
+}
+
+.linea-tiempo::before {
+  content: '';
+  /* Crea un elemento vacío que actuará como la línea vertical */
+  position: absolute;
+  /* Posición absoluta para posicionarlo correctamente dentro de la línea de tiempo */
+  top: 0;
+  left: 20px;
+  /* Posición a la izquierda de la línea de tiempo */
+  height: 100%;
+  /* Altura total para que cubra toda la línea de tiempo */
+  width: 2px;
+  /* Grosor de la línea vertical */
+  background-color: #007BFF;
+  /* Color de la línea vertical */
+}
+
+.elemento-tiempo {
+  position: relative;
+  /* Posición relativa para permitir el posicionamiento de elementos dentro */
+  margin-bottom: 40px;
+  /* Espacio inferior para separar cada elemento de la línea de tiempo */
+  cursor: pointer;
+  /* Cambia el cursor a un puntero al pasar el mouse, indicando que es interactivo */
+  transition: background-color 0.3s ease;
+  /* Transición suave para el cambio de color de fondo */
+}
+
+.elemento-tiempo:hover {
+  background-color: #f10f0f;
+  /* Cambia el color de fondo al pasar el mouse para dar retroalimentación visual */
+}
+
+.fecha-tiempo {
+  position: absolute;
+  /* Posición absoluta para colocar la fecha a la izquierda del contenido */
+  left: -60px;
+  /* Desplazamiento a la izquierda para que la fecha no se superponga al contenido */
+  font-size: 1.2rem;
+  /* Tamaño de fuente mayor para resaltar la fecha */
+  font-weight: bold;
+  /* Negrita para hacer que la fecha destaque más */
+  color: #007BFF;
+  /* Color de la fecha para que combine con la línea vertical */
+}
+
+.contenido-tiempo {
+  background-color: #fff;
+  /* Fondo blanco para el contenido de cada elemento de la línea de tiempo */
+  padding: 15px;
+  /* Espacio interno para evitar que el texto esté pegado a los bordes */
+  border-radius: 8px;
+  /* Bordes redondeados para un aspecto más suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra para dar un efecto de profundidad */
+}
+
+.contenido-tiempo h3 {
+  font-size: 1.5rem;
+  /* Tamaño de fuente mayor para los encabezados dentro del contenido */
+  margin-bottom: 10px;
+  /* Espacio debajo del encabezado para separación */
+}
+
+.detalles-tiempo {
+  font-size: 1rem;
+  /* Tamaño de fuente estándar para los detalles */
+  color: #555;
+  /* Color de texto gris para los detalles, más suave que el negro */
+  max-height: 0;
+  /* Inicialmente oculto, no ocupa espacio */
+  overflow: hidden;
+  /* Evita que se muestre el contenido oculto */
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  /* Transición suave para expandir el contenido */
+}
+
+.elemento-tiempo.activo .detalles-tiempo {
+  max-height: 100px;
+  /* Cuando el elemento es activo, se expande para mostrar el contenido */
+  padding: 10px 0;
+  /* Espacio adicional arriba y abajo del contenido expandido */
+}
+
+.elemento-tiempo.activo {
+  background-color: #d1e7dd;
+  /* Cambia el color de fondo del elemento activo para resaltar que está seleccionado */
+}
+
+/* Aquí acaba la línea de tiempo */
+
+.box-loading{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  display: none;
+}
+.loading {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+}
+.loading1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #f98705;
+  border-left-color: transparent;
+  border-bottom: none;
+  border-radius: 50%;
+  animation: loading_1 1s cubic-bezier(.17,.62,.87,.36) infinite;
+}
+.loading2 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 4px solid #d6a906;
+  border-right-color: transparent;
+  border-top: none;
+  border-radius: 50%;
+  left: calc(50% - 30px);
+  top: calc(50% - 30px);
+  animation: loading_2 1s cubic-bezier(.17,.62,.87,.36) infinite;
+}
+@keyframes loading_1 {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+@keyframes loading_2 {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(-360deg);
+  }
+}

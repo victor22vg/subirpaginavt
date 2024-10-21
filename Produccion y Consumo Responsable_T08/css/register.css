@@ -1,0 +1,79 @@
+/* Aquí comienza el register */
+/* Estilos para el formulario de registro */
+.register {
+  max-width: 400px;
+  /* Ancho máximo del formulario establecido en 400px */
+  margin: 0 auto;
+  /* Centra el formulario horizontalmente sin margen superior o inferior */
+  padding: 2rem;
+  /* Espaciado interno de 2rem alrededor del contenido */
+  background-color: var(--container-color);
+  /* Color de fondo del contenedor del formulario */
+  border-radius: 1rem;
+  /* Bordes redondeados para suavizar el diseño */
+  box-shadow: 0 8px 32px hsla(230, 75%, 15%, .2);
+  /* Sombra para dar profundidad al formulario */
+}
+
+.register__title {
+  text-align: center;
+  /* Centra el título del formulario */
+  color: var(--title-color);
+  /* Color del texto del título */
+}
+
+.register__group {
+  margin-bottom: 1.5rem;
+  /* Espacio debajo de cada grupo de elementos en el formulario */
+}
+
+.register__label {
+  display: block;
+  /* Hace que la etiqueta ocupe todo el ancho disponible */
+  margin-bottom: .5rem;
+  /* Espacio debajo de la etiqueta para separación */
+  color: var(--title-color);
+  /* Color del texto de la etiqueta */
+}
+
+.register__input {
+  width: 100%;
+  /* Campo de entrada ocupa todo el ancho del contenedor */
+  padding: 1rem;
+  /* Espaciado interno del campo de entrada para comodidad */
+  border-radius: .5rem;
+  /* Bordes redondeados para un aspecto más suave */
+  border: 2px solid var(--border-color);
+  /* Borde de 2px con un color definido */
+}
+
+.register__button {
+  background-color: var(--first-color);
+  /* Color de fondo del botón de registro */
+  color: white;
+  /* Color del texto del botón */
+  padding: 1rem;
+  /* Espaciado interno del botón para un mejor clic */
+  border-radius: .5rem;
+  /* Bordes redondeados para el botón */
+  border: none;
+  /* Sin borde visible en el botón */
+  cursor: pointer;
+  /* Cambia el cursor al pasar sobre el botón para indicar que es clickeable */
+  width: 100%;
+  /* El botón ocupa todo el ancho del contenedor */
+}
+
+.register__button:hover {
+  opacity: 0.8;
+  /* Efecto de opacidad al pasar el mouse para un feedback visual */
+}
+
+.register__login {
+  text-align: center;
+  /* Centra el texto de inicio de sesión debajo del formulario */
+  margin-top: 1rem;
+  /* Margen superior para separar del resto del contenido */
+}
+
+/* Aquí termina el Register */

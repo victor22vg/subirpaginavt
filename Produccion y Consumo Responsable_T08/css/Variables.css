@@ -1,0 +1,215 @@
+:root {
+    /* Definimos una variable para la altura del encabezado */
+    --header-height: 3.5rem;
+
+    /* Paleta de colores */
+    --first-color: hsl(230, 75%, 56%);
+    /* Color principal */
+    --title-color: hsl(230, 75%, 15%);
+    /* Color para títulos */
+    --subtitle-color: hsl(230, 50%, 40%);
+    /* Color para subtítulos */
+    --text-color: hsl(230, 12%, 40%);
+    /* Color del texto normal */
+    --body-color: hsl(230, 100%, 98%);
+    /* Color de fondo del cuerpo */
+    --container-color: hsl(230, 100%, 97%);
+    /* Color del contenedor */
+    --border-color: hsl(230, 25%, 80%);
+    /* Color para bordes */
+    --button-color: hsl(54, 50%, 74%);
+    /* Color del botón */
+
+    /* Configuración de fuentes y tamaños */
+    --body-font: "Syne", sans-serif;
+    /* Fuente principal para el cuerpo */
+    --p-font: "Arial", sans-serif;
+    /* Fuente para los párrafos */
+    --h1-font-size: 2rem;
+    /* Tamaño de fuente para h1 */
+    --h2-font-size: 1.25rem;
+    /* Tamaño de fuente para h2 */
+    --h3-font-size: 1.125rem;
+    /* Tamaño de fuente para h3 */
+    --h4-font-size: 1rem;
+    /* Tamaño de fuente para h4 */
+    --h5-font-size: .875rem;
+    /* Tamaño de fuente para h5 */
+    --h6-font-size: .75rem;
+    /* Tamaño de fuente para h6 */
+    --normal-font-size: .938rem;
+    /* Tamaño de fuente normal */
+
+    h1 {
+        font-family: var(--body-font);
+        font-size: var(--h1-font-size);
+        font-weight: bold;
+        margin-bottom: 20px;
+        /* Espacio debajo del encabezado */
+        text-transform: uppercase;
+        /* Convierte el texto de estos elementos a mayúsculas */
+    }
+
+    h1principal {
+        font-family: var(--body-font);
+        font-size: var(--h1-font-size);
+        font-weight: bold;
+        margin-bottom: 20px;
+        /* Espacio debajo del encabezado */
+        text-transform: uppercase;
+        /* Convierte el texto de estos elementos a mayúsculas */
+    }
+
+    h2 {
+        font-family: var(--body-font);
+        font-size: var(--h2-font-size);
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        /* Convierte el texto de estos elementos a mayúsculas */
+        text-transform: capitalize;
+    }
+
+    h2blanco {
+        font-family: var(--body-font);
+        font-size: var(--h2-font-size);
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        /* Convierte el texto de estos elementos a mayúsculas */
+        text-transform: capitalize;
+        color: aliceblue;
+    }
+    
+    h3 {
+        font-family: var(--body-font);
+        font-size: var(--h3-font-size);
+        font-weight: bold;
+        margin-bottom: 12px;
+        text-transform: capitalize;
+    }
+
+    h4 {
+        font-family: var(--body-font);
+        font-size: var(--h4-font-size);
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-transform: capitalize;
+    }
+
+    h5 {
+        font-family: var(--body-font);
+        font-size: var(--h5-font-size);
+        font-weight: bold;
+        margin-bottom: 8px;
+        text-transform: capitalize;
+    }
+
+    h6 {
+        font-family: var(--body-font);
+        font-size: var(--h6-font-size);
+        font-weight: bold;
+        margin-bottom: 6px;
+        text-transform: capitalize;
+    }
+
+    /* Estilos para párrafos */
+    p {
+        font-family: var(--p-font);
+        /* Fuente distinta para los párrafos */
+        font-size: var(--normal-font-size);
+        line-height: 1.6;
+        /* Espaciado entre líneas */
+        color: #000000;
+        /* Color del texto */
+        text-align: justify;
+        /* Justificar el texto */
+        margin-bottom: 20px;
+        /* Espacio debajo del párrafo */
+    }
+
+    /* Efecto al pasar el ratón sobre los párrafos */
+    p:hover {
+        color: #555;
+        /* Cambia el color del texto al pasar el ratón */
+        transition: color 0.3s ease;
+        /* Transición suave */
+    }
+
+    pblanco {
+        font-family: var(--p-font);
+        /* Fuente distinta para los párrafos */
+        font-size: var(--normal-font-size);
+        line-height: 1.6;
+        /* Espaciado entre líneas */
+        color: #ffffff;
+        /* Color del texto */
+        text-align: justify;
+        /* Justificar el texto */
+        margin-bottom: 20px;
+        /* Espacio debajo del párrafo */
+    }
+
+    /* Efecto al pasar el ratón sobre los párrafos */
+    pblanco:hover {
+        color: #f0eaeab7;
+        /* Cambia el color del texto al pasar el ratón */
+        transition: color 0.3s ease;
+        /* Transición suave */
+    }
+
+    /* Estilos para texto en negrita */
+
+    strongNegro {
+        font-weight: bold;
+        /* Negrita */
+        color: #000000;
+        /* Color destacado para texto en negrita */
+    }
+
+    strongVerde {
+        font-weight: bold;
+        /* Negrita */
+        color: #4CAF50;
+        /* Color destacado para texto en negrita */
+    }
+
+    strongAzul {
+        font-weight: bold;
+        /* Negrita */
+        color: #1505f8;
+        /* Color destacado para texto en negrita */
+    }
+
+    strongRojo {
+        font-weight: bold;
+        /* Negrita */
+        color: #f10f0f;
+        /* Color destacado para texto en negrita */
+    }
+
+    /* Definición de pesos de fuente */
+    --font-regular: 400;
+    /* Peso normal */
+    --font-medium: 500;
+    /* Peso medio */
+    --font-semi-bold: 600;
+    /* Peso semi-negrita */
+
+    /* Control de superposición de elementos */
+    --z-fixed: 100;
+    /* Z-index para elementos fijos */
+    --z-modal: 1000;
+    /* Z-index para modales */
+}
+
+/* Responsive */
+/* Ajustamos el tamaño de fuente en pantallas más grandes */
+@media screen and (min-width: 1023px) {
+    :root {
+        --h2-font-size: 1.5rem;
+        /* Aumentamos el tamaño de h2 */
+        --normal-font-size: 1rem;
+        /* Aumentamos el tamaño de texto normal */
+    }
+}

@@ -1,0 +1,79 @@
+/* Aquí comienza el Recover */
+/* Estilos para el formulario de recuperación de contraseña */
+.recover {
+  max-width: 400px;
+  /* El ancho máximo del formulario es de 400px */
+  margin: 150px auto;
+  /* Margen superior de 150px y centrado horizontalmente */
+  padding: 2rem;
+  /* Espaciado interno de 2rem */
+  background-color: var(--container-color);
+  /* Color de fondo del contenedor */
+  border-radius: 1rem;
+  /* Bordes redondeados para un acabado suave */
+  box-shadow: 0 8px 32px hsla(230, 75%, 15%, .2);
+  /* Sombra para darle profundidad al formulario */
+}
+
+.recover__title {
+  text-align: center;
+  /* Centra el título del formulario */
+  color: var(--title-color);
+  /* Color del texto del título */
+}
+
+.recover__group {
+  margin-bottom: 1.5rem;
+  /* Espacio debajo de cada grupo de elementos */
+}
+
+.recover__label {
+  display: block;
+  /* Hace que la etiqueta ocupe todo el ancho disponible */
+  margin-bottom: .5rem;
+  /* Espacio debajo de la etiqueta */
+  color: var(--title-color);
+  /* Color del texto de la etiqueta */
+}
+
+.recover__input {
+  width: 100%;
+  /* El campo de entrada ocupa todo el ancho del contenedor */
+  padding: 1rem;
+  /* Espaciado interno del campo de entrada */
+  border-radius: .5rem;
+  /* Bordes redondeados para el campo de entrada */
+  border: 2px solid var(--border-color);
+  /* Borde con un color definido */
+}
+
+.recover__button {
+  background-color: var(--first-color);
+  /* Color de fondo del botón */
+  color: white;
+  /* Color del texto del botón */
+  padding: 1rem;
+  /* Espaciado interno del botón */
+  border-radius: .5rem;
+  /* Bordes redondeados para el botón */
+  border: none;
+  /* Sin borde visible */
+  cursor: pointer;
+  /* Cambia el cursor al pasar sobre el botón */
+  width: 100%;
+  /* El botón ocupa todo el ancho del contenedor */
+}
+
+.recover__button:hover {
+  opacity: 0.8;
+  /* Cambia la opacidad del botón al pasar el mouse para un efecto visual */
+}
+
+.recover__login {
+  text-align: center;
+  /* Centra el texto de inicio de sesión */
+  margin-top: 1rem;
+  /* Margen superior para separar del resto del contenido */
+}
+
+/* Aquí termina el Recover */

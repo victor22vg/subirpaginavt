@@ -1,0 +1,450 @@
+/* Aquí comienzan los 3 primeros contenedores */
+.contenido-principal {
+  text-align: center;
+  /* Centra el texto dentro del contenedor para una presentación equilibrada */
+  padding: 30px;
+  /* Agrega un espacio interno para que el contenido no se sienta apretado */
+  background-color: #f9f9f9;
+  /* Color de fondo suave para un aspecto limpio y moderno */
+  border-radius: 10px;
+  /* Bordes redondeados para darle un toque más amigable */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Añade una sombra sutil para un efecto de profundidad */
+  margin: 100px 20px;
+  /* Margen alrededor del contenedor para separarlo de otros elementos en la página */
+}
+
+.contenedor-ods {
+  display: flex;
+  /* Usamos flexbox para alinear elementos en una fila de manera eficiente */
+  justify-content: space-between;
+  /* Espacia los elementos en el contenedor para que estén a ambos lados */
+  align-items: center;
+  /* Alinea verticalmente los elementos al centro */
+  max-width: 1200px;
+  /* Limita el ancho máximo para que el contenido no se extienda demasiado */
+  margin: 20px auto;
+  /* Margen automático para centrar el contenedor horizontalmente */
+}
+
+.texto-ods h2 {
+  margin-bottom: 40px;
+  /* Ajusta este valor según el espacio deseado */
+  text-align: center;
+  /* Centra el texto dentro del contenedor */
+}
+
+.texto-ods h3 {
+  margin-bottom: 40px;
+  /* Ajusta este valor según el espacio deseado */
+  text-align: center;
+  /* Centra el texto dentro del contenedor */
+}
+
+.texto-ods {
+  flex: 1;
+  /* Permite que el texto ocupe el espacio disponible en el contenedor */
+  text-align: left;
+  /* Alinea el texto a la izquierda para una lectura más natural */
+  padding-right: 20px;
+  /* Agrega espacio a la derecha del texto para separarlo de la imagen */
+  font-size: 18px;
+  /* Ajusta el tamaño del texto para una buena legibilidad */
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+
+  /* Estilos para pantallas más pequeñas (móviles y tabletas) */
+  .contenedor-ods {
+    flex-direction: column;
+    /* Cambia la dirección de los elementos a columna para adaptarse a pantallas más estrechas */
+    text-align: center;
+    /* Centra el texto en dispositivos pequeños para una mejor presentación */
+  }
+
+  .texto-ods {
+    padding-right: 0;
+    /* Elimina el padding a la derecha en vistas estrechas para más espacio */
+    text-align: center;
+    /* Alinea el texto al centro para adaptarse a la nueva disposición */
+    margin-bottom: 20px;
+    /* Añade un margen inferior para separar las tarjetas */
+  }
+
+  /* Ajustes de márgenes en contenido principal */
+  .contenido-principal {
+    margin: 50px 10px;
+    /* Reduce el margen en móviles para más espacio */
+    padding: 20px;
+    /* Reduce el padding en móviles */
+  }
+}
+
+/* Aquí terminan los contenedores */
+/* Estilo de botones */
+.botonSaberMas {
+  background-color: #063836; /* Color de fondo del botón, un verde agradable */
+  border: none; /* Eliminamos cualquier borde para un diseño limpio */
+  color: white; /* Color del texto, blanco para buen contraste con el fondo */
+  padding: 15px 60px; /* Espaciado interno, suficiente para que el botón sea cómodo de clicar */
+  text-align: center; /* Alineamos el texto al centro del botón */
+  text-decoration: none; /* Sin subrayado en el texto para un aspecto más moderno */
+  display: block; /* Cambiar a bloque para permitir el centrado */
+  width: fit-content; /* Ajusta el ancho del botón al contenido */
+  font-size: 16px; /* Tamaño de la fuente, fácil de leer */
+  font-weight: bold; /* Texto en negrita para mayor énfasis */
+  border-radius: 8px; /* Bordes redondeados para un diseño más suave */
+  transition: background-color 0.3s, transform 0.3s; /* Efectos de transición para un suave cambio de color y tamaño */
+  cursor: pointer; /* Cambiamos el cursor a "pointer" para indicar que es clicable */
+  margin: 0 auto 60px; /* Centrar horizontalmente y margen inferior */
+}
+
+/* Hover y Active States */
+.botonSaberMas:hover {
+  background-color: #688667; /* Color al pasar el mouse */
+  transform: scale(1.1); /* Agrandar ligeramente al pasar el mouse */
+}
+
+.botonSaberMas:active {
+  background-color: #a5bc8f; /* Color al hacer clic */
+  transform: scale(0.98); /* Disminuir ligeramente al hacer clic */
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+  /* Estilos para pantallas más pequeñas (móviles y tabletas) */
+  .botonSaberMas {
+    padding: 12px 30px; /* Reduce el padding para pantallas pequeñas */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    margin-bottom: 30px; /* Reduce el margen inferior */
+  }
+}
+
+
+/* Estilo para rotación de imágenes */
+.imagen-ods1 img {
+  width: 350px;
+  /* Ajusta el tamaño según lo necesites */
+  height: auto;
+  /* Mantiene la proporción de la imagen */
+  animation: girar1 60s infinite linear;
+  /* Gira infinitamente cada 60 segundos de manera lineal */
+  margin-right: 40px;
+}
+
+.imagen-ods2 img {
+  width: 500px;
+  /* Ajusta el tamaño según lo necesites */
+  height: auto;
+  /* Mantiene la proporción de la imagen */
+  animation: girar 60s infinite linear;
+  /* Gira infinitamente cada 60 segundos de manera lineal */
+  margin-right: 40px;
+}
+
+.imagen-ods3 img {
+  width: 350px;
+  /* Ajusta el tamaño según lo necesites */
+  height: auto;
+  /* Mantiene la proporción de la imagen */
+  margin-right: 40px;
+}
+
+@keyframes girar1 {
+  from {
+    transform: rotate(0deg);
+    /* Comienza en 0 grados */
+  }
+
+  to {
+    transform: rotate(800deg);
+    /* Gira 800 grados */
+  }
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+    /* Comienza en 0 grados */
+  }
+
+  to {
+    transform: rotate(-800deg);
+    /* Gira -800 grados */
+  }
+}
+
+/* Asegura que el tamaño de la imagen para dispositivos pequeños también gire */
+@media screen and (max-width: 768px) {
+
+  .imagen-ods1 img,
+  .imagen-ods2 img,
+  .imagen-ods3 img {
+    /* Corregido aquí para incluir .imagen-ods3 */
+    width: 100%;
+    /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+    margin-top: 10px;
+    /* Reduce el espacio superior */
+  }
+}
+
+.lista-valores {
+  display: none;
+  /* Oculta la lista por defecto */
+  margin: 20px 0;
+  /* Espaciado vertical */
+  list-style-type: none;
+  /* Sin viñetas */
+  padding: 0;
+  /* Sin padding */
+  font-family: "Verdana", sans-serif;
+  /* Aplica la fuente Verdana a la lista */
+}
+
+.lista-valores li {
+  padding: 8px 0;
+  /* Espaciado entre elementos de la lista */
+  font-family: "Verdana", sans-serif;
+  /* Aplica la fuente Verdana a los elementos de la lista */
+  font-size: 1rem;
+  /* Tamaño de fuente para los elementos de la lista */
+  color: #333;
+  /* Color de texto de los elementos de la lista */
+}
+
+strong {
+  font-family: sans-serif;
+  /* Fuente sans-serif para un texto en negrita moderno y legible.*/
+}
+
+.boton-desplegar {
+  display: block;
+  /* Botón como bloque */
+  width: 30%;
+  /* Ancho por defecto en pantallas grandes */
+  padding: 15px 60px;
+  /* Espaciado interno */
+  background-color: #063836;
+  /* Color de fondo del botón */
+  color: white;
+  /* Color del texto del botón */
+  border: none;
+  /* Sin borde */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  cursor: pointer;
+  /* Cambia el cursor al pasar sobre el botón */
+  text-align: center;
+  /* Centra el texto en el botón */
+  margin: 20px auto;
+  /* Margen superior y centrado horizontalmente */
+}
+
+/* Estilo para cuando el mouse pasa sobre el botón */
+.boton-desplegar:hover {
+  background-color: #688667;
+  /* Color más oscuro al pasar el mouse */
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+  .boton-desplegar {
+    width: 80%;
+    /* Ancho más amplio en pantallas pequeñas */
+    padding: 12px 30px;
+    /* Espaciado interno reducido */
+    font-size: 16px;
+    /* Tamaño de fuente más pequeño */
+    margin: 10px auto;
+    /* Reduce el margen en dispositivos pequeños */
+  }
+}
+
+
+/* Aquí comienza el estilo del título ODS */
+.titulo-ods {
+  text-align: center;
+  /* Centra el texto dentro del contenedor */
+  padding: 30px;
+  /* Agrega un espacio interno */
+  background-color: #f9f9f9;
+  /* Color de fondo suave */
+  border-radius: 10px;
+  /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra sutil */
+  margin: 100px;
+  /* Margen alrededor del contenedor */
+}
+
+/* Estilo del contenedor de las tarjetas */
+.contenedor-tarjetas {
+  display: flex;
+  /* Usar flexbox para disposición */
+  flex-wrap: wrap;
+  /* Permite que las tarjetas se ajusten en múltiples filas */
+  gap: 20px;
+  /* Espacio entre las tarjetas */
+  justify-content: center;
+  /* Centra las tarjetas en el contenedor */
+  margin-top: 20px;
+  /* Margen superior */
+}
+
+/* Estilo de cada tarjeta */
+.tarjeta {
+  width: 200px;
+  /* Ancho de la tarjeta */
+  height: 300px;
+  /* Alto de la tarjeta */
+  perspective: 1000px;
+  /* Perspectiva para efecto 3D */
+  position: relative;
+  /* Para posicionar las caras de la tarjeta */
+}
+
+/* Estilo de la parte delantera y trasera de la tarjeta */
+.frente,
+.detras {
+  width: 100%;
+  /* Ancho completo de la tarjeta */
+  height: 100%;
+  /* Alto completo de la tarjeta */
+  position: absolute;
+  /* Posicionamiento absoluto */
+  backface-visibility: hidden;
+  /* Oculta la parte trasera cuando no está visible */
+  transition: transform 0.6s ease-in-out;
+  /* Efecto de transición para la rotación */
+  border-radius: 15px;
+  /* Bordes redondeados */
+  overflow: hidden;
+  /* Oculta contenido que se desborda */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra sutil */
+}
+
+/* Estilo de la parte delantera de la tarjeta */
+.frente {
+  background-color: #fff;
+  /* Fondo blanco */
+  display: flex;
+  /* Usar flexbox para centrar contenido */
+  align-items: center;
+  /* Centra verticalmente */
+  justify-content: center;
+  /* Centra horizontalmente */
+}
+
+/* Estilo de la parte trasera de la tarjeta */
+.detras {
+  background-color: #cce5ff;
+  /* Fondo Azul claro */
+  transform: rotateY(180deg);
+  /* Gira la tarjeta para mostrar la parte trasera */
+  display: flex;
+  /* Usar flexbox para centrar contenido */
+  align-items: center;
+  /* Centra verticalmente */
+  justify-content: center;
+  /* Centra horizontalmente */
+  padding: 20px;
+  /* Espaciado interno */
+  flex-direction: column;
+  /* Organiza contenido en columna */
+}
+
+/* Estilo del título en la parte trasera */
+.detras h4 {
+  margin-bottom: 10px;
+  /* Espacio debajo del título */
+}
+
+/* Estilo del párrafo en la parte trasera */
+.detras p {
+  margin: 0;
+  /* Eliminar márgenes por defecto */
+}
+
+/* Efecto de rotación en hover */
+.tarjeta:hover .frente {
+  transform: rotateY(180deg);
+  /* Rota la parte delantera */
+}
+
+.tarjeta:hover .detras {
+  transform: rotateY(0deg);
+  /* Muestra la parte trasera */
+}
+
+/* Estilo de las imágenes dentro de las tarjetas */
+img {
+  width: 100%;
+  /* Ajustado para que haya un pequeño margen */
+  height: 70%;
+  /* Ajustado para que la imagen no ocupe toda la altura */
+  object-fit: cover;
+  /* Ajusta la imagen al tamaño del contenedor */
+  border-radius: 15px;
+  /* Bordes redondeados para la imagen */
+}
+
+/* Aquí acaba el estilo de las cartas */
+
+.box-loading{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  display: none;
+}
+.loading {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+}
+.loading1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #f98705;
+  border-left-color: transparent;
+  border-bottom: none;
+  border-radius: 50%;
+  animation: loading_1 1s cubic-bezier(.17,.62,.87,.36) infinite;
+}
+.loading2 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 4px solid #d6a906;
+  border-right-color: transparent;
+  border-top: none;
+  border-radius: 50%;
+  left: calc(50% - 30px);
+  top: calc(50% - 30px);
+  animation: loading_2 1s cubic-bezier(.17,.62,.87,.36) infinite;
+}
+@keyframes loading_1 {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+@keyframes loading_2 {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(-360deg);
+  }
+}

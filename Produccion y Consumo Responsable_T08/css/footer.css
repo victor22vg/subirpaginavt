@@ -1,0 +1,124 @@
+
+/* Aquí comienza el Footer */
+
+/* Reseteamos márgenes y padding para todos los elementos y ajustamos el modelo de caja para evitar que las dimensiones sean afectadas por el padding y el borde */
+* {
+    margin: 0;
+    /* Elimina el margen predeterminado de todos los elementos */
+    padding: 0;
+    /* Elimina el padding predeterminado de todos los elementos */
+    box-sizing: border-box;
+    /* Cambia el modelo de caja para incluir el padding y el borde en el tamaño total del elemento */
+    list-style: none;
+    /* Elimina los estilos predeterminados de listas, como los puntos en las listas no ordenadas */
+}
+
+/* Contenedor principal con un ancho máximo de 1200px, centrado automáticamente */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo para el fondo del pie de página (footer) con un color oscuro y un espaciado generoso */
+.footer {
+    background-color: #24262b;
+    padding: 80px 0;
+    /* Espacio arriba y abajo del contenido */
+}
+
+/* Estilo flexible para organizar los elementos del footer en filas, permitiendo que los bloques se reorganicen */
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que los bloques se ajusten a varias filas si es necesario */
+}
+
+/* Cada bloque de enlaces dentro del footer ocupa el 25% del ancho del contenedor */
+.footer-links {
+    width: 25%;
+    padding: 0 15px;
+    /* Espaciado lateral para cada bloque */
+}
+
+/* Estilo para los títulos de las secciones del footer */
+.footer-links h4 {
+    color: #fff;
+    /* Texto en blanco */
+    margin-bottom: 25px;
+    /* Espacio debajo del título */
+    border-bottom: 2px solid #00c3ff;
+    /* Línea inferior azul brillante */
+    padding-bottom: 10px;
+    /* Espacio adicional debajo del título */
+    display: inline-block;
+}
+
+/* Estilo para los enlaces dentro del footer */
+.footer-links ul li a {
+    font-size: 18px;
+    /* Tamaño de letra mediano */
+    text-decoration: none;
+    /* Quitamos el subrayado predeterminado de los enlaces */
+    color: #bbbbbb;
+    /* Color gris claro para los enlaces */
+    display: block;
+    /* Hace que los enlaces ocupen todo el ancho disponible */
+    margin-bottom: 15px;
+    /* Espacio entre enlaces */
+    transition: all .3s ease;
+    /* Suave transición para los efectos al interactuar con los enlaces */
+}
+
+/* Cambiamos el color de los enlaces y añadimos un desplazamiento al pasar el mouse */
+.footer-links ul li a:hover {
+    color: #fff;
+    /* El enlace cambia a blanco al pasar el mouse */
+    padding-left: 6px;
+    /* Desplazamiento ligero hacia la izquierda */
+}
+
+/* Estilo para los iconos de redes sociales en el footer */
+.social-link a {
+    display: inline-block;
+    /* Los iconos aparecen uno al lado del otro */
+    min-height: 40px;
+    width: 40px;
+    /* Iconos cuadrados con 40px de alto y ancho */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Fondo blanco semitransparente */
+    margin: 0 10px 10px 0;
+    /* Espacio entre los iconos */
+    text-align: center;
+    /* Centramos el contenido dentro del icono */
+    line-height: 40px;
+    /* Centra verticalmente el icono */
+    border-radius: 50%;
+    /* Hacemos los iconos circulares */
+    color: #fff;
+    /* Color blanco para el icono */
+    transition: all .5s ease;
+    /* Suave transición al interactuar con los iconos */
+}
+
+/* Cambiamos el fondo de los iconos al pasar el mouse */
+.social-link a:hover {
+    background-color: #00c3ff;
+    /* Cambiamos el fondo a azul brillante */
+}
+
+/* Estilos para pantallas más pequeñas */
+@media(max-width: 991px) {
+    .footer-row {
+        text-align: center;
+        /* Centramos el contenido del footer en pantallas pequeñas */
+    }
+
+    .footer-links {
+        width: 100%;
+        /* Hacemos que cada bloque de enlaces ocupe el 100% del ancho en pantallas pequeñas */
+        margin-bottom: 30px;
+        /* Espaciado adicional entre bloques en pantallas pequeñas */
+    }
+}
+
+/* Aquí termina el Footer */

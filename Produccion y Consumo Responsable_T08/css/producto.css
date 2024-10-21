@@ -1,0 +1,260 @@
+/* Estilo para la sección principal */
+.contenido-principal {
+    text-align: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 100px 20px;
+}
+
+h2blanco {
+    color: white;
+    /* Color del texto en blanco */
+    position: relative;
+    /* Para permitir z-index */
+    z-index: 1;
+    /* Asegura que esté por encima de la imagen de fondo */
+    margin-bottom: 1rem;
+    /* Espaciado inferior */
+    font-family: var(--body-font);
+    font-size: var(--h2-font-size);
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    /* Convierte el texto de estos elementos a mayúsculas */
+    text-transform: capitalize;
+}
+
+/* Estilo para la sección "¿Cómo surgió esta idea?" */
+.comosurgio {
+    position: relative;
+    /* Necesario para posicionar el pseudo-elemento */
+    max-width: 900px;
+    /* Aumenta el ancho máximo del contenedor */
+    margin: 2rem auto;
+    padding: 2rem;
+    /* Aumenta el padding para hacerlo más grande */
+    color: #34495e;
+    /* Color del texto */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Para ocultar el desbordamiento del pseudo-elemento */
+}
+
+.comosurgio::before {
+    content: '';
+    /* Necesario para el pseudo-elemento */
+    position: absolute;
+    /* Posición absoluta */
+    top: 0;
+    /* Alinea al borde superior */
+    left: 0;
+    /* Alinea al borde izquierdo */
+    right: 0;
+    /* Alinea al borde derecho */
+    bottom: 0;
+    /* Alinea al borde inferior */
+    background-image: url(../imagenes/productos/fondo-contenedor-surgir.jpg);
+    /* Imagen de fondo */
+    background-size: cover;
+    /* Cubre todo el contenedor */
+    background-position: center;
+    /* Centra la imagen */
+    filter: blur(1px);
+    /* Aplica desenfoque */
+    z-index: 0;
+    /* Envía el pseudo-elemento al fondo */
+}
+
+.comosurgio pblanco {
+    position: relative;
+    /* Asegura que el texto esté por encima */
+    z-index: 1;
+    /* Coloca el texto por encima del pseudo-elemento */
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Color de fondo con un poco de opacidad */
+.comosurgio {
+    background-color: rgba(249, 249, 249, 0.8);
+    /* Color de fondo con transparencia */
+}
+
+/* Estilo para la sección "Nuestro Producto" */
+.nuestroproducto {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+.nuestroproducto h2 {
+    text-align: center;
+}
+
+/* Estilo para el contenedor de las imágenes */
+.image-container {
+    text-align: center;
+    /* Centra el contenido */
+    position: relative;
+    /* Posiciona el contenedor relativo para el checkbox */
+}
+
+.toggle {
+    display: none;
+    /* Oculta el checkbox */
+}
+
+.boton-desplegar {
+    display: block;
+    /* Asegura que el botón esté en bloque */
+    width: 30%;
+    /* Ancho del botón */
+    padding: 15px 60px;
+    /* Espaciado interno */
+    background-color: #063836;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto del botón */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+    margin: 20px auto;
+    /* Margen superior e inferior, centrado horizontalmente */
+    text-align: center;
+    /* Centra el texto del botón */
+}
+
+.images {
+    display: none;
+    /* Oculta las imágenes inicialmente */
+    justify-content: center;
+    /* Alinea las imágenes en el centro */
+    gap: 1rem;
+    /* Espacio entre las imágenes */
+    margin-top: 1rem;
+    /* Espacio superior para separar del botón */
+}
+
+.toggle:checked+.boton-desplegar+.images {
+    display: flex;
+    /* Muestra las imágenes al marcar el checkbox */
+}
+
+/* Estilo para las imágenes del producto */
+.images img {
+    width: 300px;
+    /* Ancho de las imágenes */
+    height: auto;
+    /* Mantiene la proporción de altura */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    object-fit: cover;
+    /* Cubre el contenedor sin distorsionar la imagen */
+}
+
+/* Media Queries para hacer el diseño responsivo */
+@media (max-width: 1200px) {
+    .contenido-principal {
+        margin: 50px 10px;
+        /* Reduce los márgenes en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 900px) {
+    .contenido-principal {
+        padding: 20px;
+        /* Reduce el padding en pantallas más pequeñas */
+    }
+
+    .boton-desplegar {
+        width: 50%;
+        /* Aumenta el ancho del botón en pantallas más pequeñas */
+    }
+
+    .images img {
+        width: 80%;
+        /* Reduce el ancho de las imágenes para que se adapten */
+    }
+}
+
+@media (max-width: 600px) {
+    h2blanco {
+        font-size: 1.5rem;
+        /* Reduce el tamaño de la fuente del título en pantallas pequeñas */
+    }
+
+    .comosurgio {
+        padding: 1rem;
+        /* Reduce el padding en pantallas más pequeñas */
+    }
+
+    .images img {
+        width: 100%;
+        /* Imágenes ocupan todo el ancho disponible */
+    }
+}
+.box-loading{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: none;
+}
+.loading {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+}
+.loading1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #f98705;
+    border-left-color: transparent;
+    border-bottom: none;
+    border-radius: 50%;
+    animation: loading_1 1s cubic-bezier(.17,.62,.87,.36) infinite;
+}
+.loading2 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 4px solid #d6a906;
+    border-right-color: transparent;
+    border-top: none;
+    border-radius: 50%;
+    left: calc(50% - 30px);
+    top: calc(50% - 30px);
+    animation: loading_2 1s cubic-bezier(.17,.62,.87,.36) infinite;
+}
+@keyframes loading_1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes loading_2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}

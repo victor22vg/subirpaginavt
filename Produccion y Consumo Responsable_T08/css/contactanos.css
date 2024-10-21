@@ -1,0 +1,507 @@
+.contacto {
+  background-image: url('../imagenes/contactanos/fondoopcional.jpg');
+  background-size: cover;
+  /* Cubre toda la página */
+  background-position: center;
+  /* Centra la imagen */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  background-attachment: fixed;
+  /* Mantiene la imagen de fondo estática */
+  min-height: 100vh;
+  /* Asegura que el contenedor ocupe al menos la altura de la ventana */
+  width: 100%;
+  /* Asegura que el contenedor ocupe todo el ancho de la ventana */
+  color: white;
+  /* Color del texto */
+}
+
+/* Contenedor padre */
+.contact-container {
+  display: flex;
+  justify-content: flex-end;
+  /* Alinea los elementos hijos (contact-info y contenedorformulario) hacia la derecha */
+}
+
+/* Cuadro de información de contacto */
+.contact-info {
+  background: rgba(129, 128, 128, 0.726);
+  /* Fondo gris semitransparente */
+  padding: 20px;
+  /* Espacio interno del cuadro */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra ligera alrededor del cuadro */
+  max-width: 600px;
+  /* Ancho máximo */
+  width: 100%;
+  /* Ocupa el 100% del contenedor padre */
+  text-align: center;
+  /* Centra el texto internamente */
+  margin: 120px 150px;
+  /* Márgenes superior e inferior y ajuste de posición horizontal */
+  /* Elimina el auto en el margen para evitar el centrado automático */
+}
+
+/* Estilos para el formulario de contacto */
+.contact-form {
+  background: rgba(129, 128, 128, 0.726);
+  /* Fondo semitransparente */
+  padding: 20px;
+  /* Espaciado interno */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra ligera */
+  max-width: 600px;
+  /* Ancho máximo del formulario */
+  width: 100%;
+  /* Ancho total del contenedor padre */
+  text-align: center;
+  /* Centra el texto internamente */
+  margin: 0 auto;
+  /* Centra el cuadro horizontalmente */
+}
+
+/* Estilo del título del formulario */
+.contact-form h3 {
+  margin-bottom: 15px;
+  /* Espacio debajo del título */
+  color: #000000;
+  /* Color negro para el título */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    /* Cambia la dirección del flex a columna en pantallas pequeñas */
+    align-items: center;
+    /* Centra los elementos en el eje horizontal */
+  }
+
+  .contact-info,
+  .contact-form {
+    margin: 90px auto;
+    /* Márgenes automáticos para centrar */
+    max-width: 90%;
+    /* Limita el ancho en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+
+  .contact-info,
+  .contact-form {
+    padding: 15px;
+    /* Ajusta el padding para pantallas más pequeñas */
+  }
+
+  .contact-form h3 {
+    font-size: 1.5em;
+    /* Reduce el tamaño de fuente del título en pantallas pequeñas */
+  }
+}
+
+/* Estilo de los campos del formulario */
+.contenedorformulario {
+  max-width: 600px;
+  /* Ancho máximo del contenedor del formulario */
+  background: rgba(218, 207, 207, 0.582);
+  /* Fondo semitransparente */
+  padding: 20px;
+  /* Espaciado interno */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Sombra alrededor del contenedor */
+  margin: 40px auto;
+  /* Centra el contenedor horizontalmente */
+  margin-left: 600px;
+}
+
+/* Estilos generales */
+h2 {
+  color: #000000;
+  /* Color negro para los títulos */
+}
+
+label {
+  display: block;
+  /* Los labels ocupan todo el ancho disponible */
+  margin-bottom: 8px;
+  /* Espaciado inferior */
+  color: #000000;
+  /* Color negro para el texto del label */
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  /* Los campos de formulario ocupan todo el ancho disponible */
+  padding: 10px;
+  /* Espaciado interno */
+  margin-bottom: 15px;
+  /* Espaciado inferior */
+  border: 1px solid #ccc;
+  /* Borde gris claro */
+  border-radius: 4px;
+  /* Bordes redondeados */
+}
+
+button {
+  background-color: #22b946;
+  /* Color de fondo verde */
+  color: white;
+  /* Texto blanco */
+  padding: 10px;
+  /* Espaciado interno */
+  border: none;
+  /* Sin borde */
+  border-radius: 4px;
+  /* Bordes redondeados */
+  cursor: pointer;
+  /* Cambia el cursor al pasar por encima */
+  width: 100%;
+  /* El botón ocupa todo el ancho disponible */
+}
+
+button:hover {
+  background-color: #218838;
+  /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .contenedorformulario {
+    max-width: 90%;
+    /* Limita el ancho en pantallas pequeñas */
+    margin: 20px auto;
+    /* Márgenes automáticos para centrar */
+    padding: 15px;
+    /* Ajusta el padding para pantallas más pequeñas */
+  }
+
+  label {
+    font-size: 0.9em;
+    /* Reduce el tamaño de fuente de los labels */
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
+    font-size: 0.9em;
+    /* Reduce el tamaño de fuente de los campos */
+  }
+
+  button {
+    font-size: 0.9em;
+    /* Reduce el tamaño de fuente del botón */
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5em;
+    /* Ajusta el tamaño de fuente del título */
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
+    padding: 8px;
+    /* Ajusta el padding de los campos para pantallas más pequeñas */
+  }
+
+  button {
+    padding: 8px;
+    /* Ajusta el padding del botón */
+  }
+}
+
+/* Iconos de redes sociales */
+.iconoscontactanos {
+  display: flex;
+  /* Utiliza flexbox para los iconos */
+  justify-content: center;
+  /* Centra los iconos horizontalmente */
+  gap: 40px;
+  /* Espacio entre los iconos */
+  margin-top: 20px;
+  /* Espaciado superior */
+}
+
+/* Estilo para los enlaces de redes sociales */
+.iconoscontactanos a {
+  display: inline-block;
+  /* Los enlaces se comportan como bloques en línea */
+  width: 100px;
+  /* Ancho de los iconos */
+  height: 100px;
+  /* Altura de los iconos */
+  position: relative;
+  /* Posicionamiento relativo para los iconos */
+  text-decoration: none;
+  /* Elimina subrayado en los enlaces */
+}
+
+/* Estilo para la capa del icono */
+.iconoscontactanos .redes {
+  position: relative;
+  /* Posicionamiento relativo dentro del contenedor del icono */
+  width: 100%;
+  /* El icono ocupa todo el ancho del contenedor */
+  height: 100%;
+  /* El icono ocupa toda la altura del contenedor */
+  background-color: transparent;
+  /* Fondo transparente por defecto */
+  border: 2px solid;
+  /* Borde visible alrededor del icono */
+  border-radius: 15px;
+  /* Bordes redondeados */
+  display: flex;
+  /* Flexbox para centrar el contenido */
+  justify-content: center;
+  /* Centrado horizontal del icono */
+  align-items: center;
+  /* Centrado vertical del icono */
+  transition: transform 0.6s ease, border-color 0.4s ease, box-shadow 0.6s ease;
+  /* Transiciones suaves para los efectos 3D */
+}
+
+/* Tamaño y color del icono */
+.iconoscontactanos .fa {
+  font-size: 40px;
+  /* Tamaño del icono */
+  color: white;
+  /* Color blanco del icono */
+  transition: opacity 0.4s ease;
+  /* Transición suave para la opacidad */
+}
+
+/* Efecto 3D al pasar el ratón sobre el icono */
+.iconoscontactanos a:hover .redes {
+  transform: perspective(1000px) rotateY(45deg) rotateX(45deg);
+  /* Giro 3D del icono */
+  border-color: transparent;
+  /* Borde invisible al pasar el ratón */
+  box-shadow: 0 50px 60px rgba(0, 0, 0, 0.6);
+  /* Sombra profunda */
+}
+
+/* Efectos específicos para cada red social */
+.facebook .redes {
+  border-color: #164cc0;
+  /* Color del borde de Facebook */
+}
+
+.youtube .redes {
+  border-color: #ff0426;
+  /* Color del borde de YouTube */
+}
+
+.instagram .redes {
+  border-color: #cd486b;
+  /* Color del borde de Instagram */
+}
+
+.linkedin .redes {
+  border-color: #0772ac;
+  /* Color del borde de LinkedIn */
+}
+
+/* Personalizar el color del ícono de cada red social */
+.facebook .fa-facebook-f {
+  color: #0d4ace;
+  /* Color del icono de Facebook */
+}
+
+.youtube .fa-youtube {
+  color: #ff0426;
+  /* Color del icono de YouTube */
+}
+
+.instagram .fa-instagram {
+  color: #cd486b;
+  /* Color del icono de Instagram */
+}
+
+.linkedin .fa-linkedin-in {
+  color: #0772ac;
+  /* Color del icono de LinkedIn */
+}
+
+/* Mostrar el texto al pasar el ratón */
+.iconoscontactanos a .text {
+  position: absolute;
+  /* Posiciona el texto de forma absoluta */
+  bottom: -35px;
+  /* Coloca el texto debajo del icono */
+  left: 50%;
+  /* Centra el texto horizontalmente */
+  transform: translateX(-50%);
+  /* Ajusta el texto para que esté bien centrado */
+  font-size: 16px;
+  /* Tamaño del texto */
+  font-weight: bold;
+  /* Texto en negrita */
+  color: #333;
+  /* Color del texto */
+  opacity: 0;
+  /* Oculta el texto inicialmente */
+  white-space: nowrap;
+  /* Evita que el texto salte de línea */
+  transition: opacity 0.4s ease, transform 0.4s ease, color 0.4s ease, text-shadow 0.4s ease;
+  /* Transiciones suaves para la animación */
+}
+
+/* Efectos para el texto de cada red social */
+.facebook .text {
+  color: #175cf0;
+  /* Color del texto de Facebook */
+  text-shadow: 0 0 5px #1759e9;
+  /* Sombra del texto de Facebook */
+}
+
+.youtube .text {
+  color: #ec2020;
+  /* Color del texto de YouTube */
+  text-shadow: 0 0 5px #ff0000;
+  /* Sombra del texto de YouTube */
+}
+
+.instagram .text {
+  color: #e4405f;
+  /* Color del texto de Instagram */
+  text-shadow: 0 0 5px #e4405f;
+  /* Sombra del texto de Instagram */
+}
+
+.linkedin .text {
+  color: #0077b5;
+  /* Color del texto de LinkedIn */
+  text-shadow: 0 0 5px #0077b5;
+  /* Sombra del texto de LinkedIn */
+}
+
+/* Mostrar el texto al pasar el ratón por encima */
+.iconoscontactanos a:hover .text {
+  opacity: 1;
+  /* Muestra el texto */
+  transform: translateY(0);
+  /* Elimina el desplazamiento */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .iconoscontactanos {
+    flex-wrap: wrap;
+    /* Permite que los iconos se envuelvan en pantallas más pequeñas */
+    gap: 20px;
+    /* Reduce el espacio entre iconos */
+  }
+
+  .iconoscontactanos a {
+    width: 80px;
+    /* Reduce el ancho de los iconos */
+    height: 80px;
+    /* Reduce la altura de los iconos */
+  }
+
+  .iconoscontactanos .fa {
+    font-size: 30px;
+    /* Reduce el tamaño del icono */
+  }
+
+  .iconoscontactanos a .text {
+    font-size: 14px;
+    /* Reduce el tamaño del texto */
+  }
+}
+
+@media (max-width: 480px) {
+  .iconoscontactanos {
+    gap: 15px;
+    /* Reduce aún más el espacio entre iconos */
+  }
+
+  .iconoscontactanos a {
+    width: 60px;
+    /* Reduce el ancho de los iconos */
+    height: 60px;
+    /* Reduce la altura de los iconos */
+  }
+
+  .iconoscontactanos .fa {
+    font-size: 25px;
+    /* Reduce el tamaño del icono */
+  }
+
+  .iconoscontactanos a .text {
+    font-size: 12px;
+    /* Reduce el tamaño del texto */
+    bottom: -30px;
+    /* Ajusta la posición del texto */
+  }
+}
+.box-loading{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  display: none;
+}
+.loading {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+}
+.loading1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #f98705;
+  border-left-color: transparent;
+  border-bottom: none;
+  border-radius: 50%;
+  animation: loading_1 1s cubic-bezier(.17,.62,.87,.36) infinite;
+}
+.loading2 {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 4px solid #d6a906;
+  border-right-color: transparent;
+  border-top: none;
+  border-radius: 50%;
+  left: calc(50% - 30px);
+  top: calc(50% - 30px);
+  animation: loading_2 1s cubic-bezier(.17,.62,.87,.36) infinite;
+}
+@keyframes loading_1 {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+@keyframes loading_2 {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(-360deg);
+  }
+}

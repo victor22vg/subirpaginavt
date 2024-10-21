@@ -1,0 +1,152 @@
+/* Estilos para el contenedor principal de la página */
+.contenido-principal {
+    text-align: center;
+    /* Centra el texto para que todo se vea bien organizado */
+    padding: 30px;
+    /* Espacio interno para que el contenido no esté apretado */
+    background-color: #f9f9f9;
+    /* Un color de fondo suave que da un aspecto limpio y moderno */
+    border-radius: 10px;
+    /* Bordes redondeados para que se vea más amigable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil para darle un toque de profundidad */
+    margin: 100px 20px;
+    /* Espacio alrededor del contenedor para separarlo de otros elementos */
+}
+
+/* Contenedor flexible que alinea los cuadros */
+.contenedor-flex {
+    display: flex;
+    /* Usa flexbox para que los elementos se alineen bien */
+    justify-content: space-between;
+    /* Espacia los elementos uniformemente entre sí */
+    margin: 0 auto;
+    /* Centra el contenedor en la página */
+    width: 90%;
+    /* Ancho del contenedor ajustable según sea necesario */
+
+    /* Ajustes para que funcione en dispositivos más pequeños */
+    flex-wrap: wrap;
+    /* Permite que los elementos se desplacen a la siguiente línea si no hay suficiente espacio */
+}
+
+/* Estilos para el contenedor "Quiénes Somos" */
+.contenedor-qs {
+    background-color: #f9fff673;
+    /* Fondo semitransparente que aporta un efecto atractivo */
+    padding: 20px;
+    width: 70%;
+    /* Mantiene un ancho deseado */
+    border-radius: 8px;
+    /* Bordes redondeados para un diseño más amigable */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para mejorar el aspecto */
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente */
+    margin-bottom: 40px;
+    /* Espacio debajo para separarlo de otros elementos */
+}
+
+/* Estilos para el contenedor "Quiénes Somos" con una imagen de fondo */
+.contenedor-qs-nc {
+    background-image: url('../imagenes/quienessomos/fondo2-qs.jpg');
+    /* Imagen de fondo que añade estilo */
+    background-size: cover;
+    /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center;
+    /* Centra la imagen para que se vea bien */
+    padding: 20px;
+    width: 70%;
+    /* Mantiene el mismo ancho que el anterior */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Mantiene la sombra para continuidad */
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente */
+    margin-bottom: 40px;
+    /* Espacio inferior para separación */
+    color: #000000;
+    /* Color del texto para garantizar buena legibilidad */
+    opacity: 0.9;
+    /* Hace el texto un poco más legible sobre el fondo */
+}
+
+/* Estilo para los títulos en las secciones */
+h2 {
+    text-align: center;
+    /* Centra los títulos para una presentación equilibrada */
+}
+
+/* Estilos para los títulos de sección */
+.section-title {
+    margin-top: 40px;
+    /* Espacio arriba para separar los títulos de otros elementos */
+}
+
+/* Estilo para la sección del equipo */
+.team-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    /* Color de fondo suave para un diseño amigable */
+
+    /* Ajustes para que funcione bien en dispositivos más pequeños */
+    flex-wrap: wrap;
+    /* Permite que los miembros del equipo se coloquen en una nueva línea si es necesario */
+}
+
+/* Estilo para los miembros del equipo */
+.team-member {
+    text-align: center;
+    /* Centra el texto y la imagen de cada miembro */
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    /* Color de fondo blanco para destacar a cada miembro */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra que mejora la estética */
+    transition: transform 0.3s ease;
+    /* Transición suave para el efecto de zoom al pasar el ratón */
+
+    /* Responsividad */
+    flex: 1 1 200px;
+    /* Cada miembro ocupa al menos 200px, pero puede crecer para llenar el espacio */
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    /* Efecto de ampliación al pasar el ratón sobre el miembro del equipo */
+}
+
+/* Estilo para las imágenes de los miembros del equipo */
+.team-member img {
+    width: 150px;
+    height: 150px;
+    /* Tamaño de la imagen del miembro */
+    border-radius: 50%;
+    /* Bordes redondeados para un estilo de imagen circular */
+    object-fit: cover;
+    /* Asegura que la imagen se ajuste bien dentro del círculo */
+    margin: 0 auto 15px auto;
+    /* Centra la imagen y añade espacio debajo */
+    display: block;
+    /* Asegura que el margen funcione correctamente */
+}
+
+/* Ajustes responsivos para imágenes y contenedores */
+@media (max-width: 768px) {
+    .team-member img {
+        width: 120px;
+        height: 120px;
+        /* Tamaño de las imágenes en pantallas más pequeñas */
+    }
+
+    .contenedor-qs,
+    .contenedor-qs-nc {
+        width: 90%;
+        /* Aumenta el ancho de los contenedores en dispositivos más pequeños */
+    }
+}
