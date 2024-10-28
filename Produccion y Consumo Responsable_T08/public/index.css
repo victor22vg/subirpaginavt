@@ -14,6 +14,61 @@
   /* Margen alrededor del contenedor para separarlo de otros elementos en la página */
 }
 
+/* Aqui Comienza Calendario Fechas */
+/* Contenedor externo para centrar en la pantalla */
+.contenedor-exterior {
+  display: flex;
+  /* Utiliza flexbox para la disposición */
+  justify-content: center;
+  /* Centra el contenido horizontalmente */
+  align-items: center;
+  /* Centra verticalmente los elementos */
+  width: 100%;
+  /* Ocupa todo el ancho de la pantalla */
+  height: auto;
+  /* Ocupa toda la altura de la ventana */
+}
+
+.contenedor-fechasimportantes {
+  text-align: center;
+  /* Centra el texto dentro del contenedor */
+  margin: 10px;
+  /* Añade un margen de 20px alrededor del contenedor */
+  max-width: 600px;
+  /* Establece un ancho máximo para que no ocupe toda la pantalla */
+}
+
+.evento-box {
+  border: 1px solid #ccc;
+  /* Añade un borde de 1px con un color gris claro */
+  padding: 20px;
+  /* Espaciado interno de 20px alrededor del contenido */
+  margin-top: 10px;
+  /* Añade un margen superior de 10px entre las cajas de eventos */
+  background-color: #f9f9f9;
+  /* Color de fondo gris claro para las cajas de eventos */
+  display: inline-block;
+  /* Hace que el cuadro se ajuste al tamaño del contenido */
+}
+
+.imagen-container {
+  display: flex;
+  /* Utiliza flexbox para centrar la imagen */
+  justify-content: center;
+  /* Centra la imagen horizontalmente dentro del contenedor */
+  margin-top: 10px;
+  /* Espacio superior para separar la imagen del texto */
+}
+
+.imagen-logo {
+  font-size: 50px;
+  /* Ajusta el tamaño del icono */
+  color: #000;
+  /* Cambia el color del icono según lo desees */
+}
+
+/* Aqui termina Calendario Fechas */
+
 .contenedor-ods {
   display: flex;
   /* Usamos flexbox para alinear elementos en una fila de manera eficiente */
@@ -84,40 +139,62 @@
 /* Aquí terminan los contenedores */
 /* Estilo de botones */
 .botonSaberMas {
-  background-color: #063836; /* Color de fondo del botón, un verde agradable */
-  border: none; /* Eliminamos cualquier borde para un diseño limpio */
-  color: white; /* Color del texto, blanco para buen contraste con el fondo */
-  padding: 15px 60px; /* Espaciado interno, suficiente para que el botón sea cómodo de clicar */
-  text-align: center; /* Alineamos el texto al centro del botón */
-  text-decoration: none; /* Sin subrayado en el texto para un aspecto más moderno */
-  display: block; /* Cambiar a bloque para permitir el centrado */
-  width: fit-content; /* Ajusta el ancho del botón al contenido */
-  font-size: 16px; /* Tamaño de la fuente, fácil de leer */
-  font-weight: bold; /* Texto en negrita para mayor énfasis */
-  border-radius: 8px; /* Bordes redondeados para un diseño más suave */
-  transition: background-color 0.3s, transform 0.3s; /* Efectos de transición para un suave cambio de color y tamaño */
-  cursor: pointer; /* Cambiamos el cursor a "pointer" para indicar que es clicable */
-  margin: 0 auto 60px; /* Centrar horizontalmente y margen inferior */
+  background-color: #063836;
+  /* Color de fondo del botón, un verde agradable */
+  border: none;
+  /* Eliminamos cualquier borde para un diseño limpio */
+  color: white;
+  /* Color del texto, blanco para buen contraste con el fondo */
+  padding: 15px 60px;
+  /* Espaciado interno, suficiente para que el botón sea cómodo de clicar */
+  text-align: center;
+  /* Alineamos el texto al centro del botón */
+  text-decoration: none;
+  /* Sin subrayado en el texto para un aspecto más moderno */
+  display: block;
+  /* Cambiar a bloque para permitir el centrado */
+  width: fit-content;
+  /* Ajusta el ancho del botón al contenido */
+  font-size: 16px;
+  /* Tamaño de la fuente, fácil de leer */
+  font-weight: bold;
+  /* Texto en negrita para mayor énfasis */
+  border-radius: 8px;
+  /* Bordes redondeados para un diseño más suave */
+  transition: background-color 0.3s, transform 0.3s;
+  /* Efectos de transición para un suave cambio de color y tamaño */
+  cursor: pointer;
+  /* Cambiamos el cursor a "pointer" para indicar que es clicable */
+  margin: 0 auto 60px;
+  /* Centrar horizontalmente y margen inferior */
 }
 
 /* Hover y Active States */
 .botonSaberMas:hover {
-  background-color: #688667; /* Color al pasar el mouse */
-  transform: scale(1.1); /* Agrandar ligeramente al pasar el mouse */
+  background-color: #688667;
+  /* Color al pasar el mouse */
+  transform: scale(1.1);
+  /* Agrandar ligeramente al pasar el mouse */
 }
 
 .botonSaberMas:active {
-  background-color: #a5bc8f; /* Color al hacer clic */
-  transform: scale(0.98); /* Disminuir ligeramente al hacer clic */
+  background-color: #a5bc8f;
+  /* Color al hacer clic */
+  transform: scale(0.98);
+  /* Disminuir ligeramente al hacer clic */
 }
 
 /* Estilos responsivos */
 @media screen and (max-width: 768px) {
+
   /* Estilos para pantallas más pequeñas (móviles y tabletas) */
   .botonSaberMas {
-    padding: 12px 30px; /* Reduce el padding para pantallas pequeñas */
-    font-size: 14px; /* Tamaño de fuente más pequeño */
-    margin-bottom: 30px; /* Reduce el margen inferior */
+    padding: 12px 30px;
+    /* Reduce el padding para pantallas pequeñas */
+    font-size: 14px;
+    /* Tamaño de fuente más pequeño */
+    margin-bottom: 30px;
+    /* Reduce el margen inferior */
   }
 }
 
@@ -392,7 +469,7 @@ img {
 
 /* Aquí acaba el estilo de las cartas */
 
-.box-loading{
+.box-loading {
   position: fixed;
   left: 0;
   top: 0;
@@ -404,12 +481,14 @@ img {
   z-index: 9999;
   display: none;
 }
+
 .loading {
   position: relative;
   width: 80px;
   height: 80px;
   background-color: white;
 }
+
 .loading1 {
   position: absolute;
   width: 100%;
@@ -418,8 +497,9 @@ img {
   border-left-color: transparent;
   border-bottom: none;
   border-radius: 50%;
-  animation: loading_1 1s cubic-bezier(.17,.62,.87,.36) infinite;
+  animation: loading_1 1s cubic-bezier(.17, .62, .87, .36) infinite;
 }
+
 .loading2 {
   position: absolute;
   width: 60px;
@@ -430,21 +510,25 @@ img {
   border-radius: 50%;
   left: calc(50% - 30px);
   top: calc(50% - 30px);
-  animation: loading_2 1s cubic-bezier(.17,.62,.87,.36) infinite;
+  animation: loading_2 1s cubic-bezier(.17, .62, .87, .36) infinite;
 }
+
 @keyframes loading_1 {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
+
 @keyframes loading_2 {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   100% {
-      transform: rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }

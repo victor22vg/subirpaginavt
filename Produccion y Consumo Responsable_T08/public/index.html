@@ -9,16 +9,23 @@
     <!-- Libreria de iconos 1 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <!-- Libreria de iconos 2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <!-- Libreria de iconos 3 -->
 
     <link rel="stylesheet" href="../public/index.css">
     <link rel="stylesheet" href="../css/nav-search-login.css">
     <link rel="stylesheet" href="../css/Variables.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/loading.css">
 
     <title>Objetivos de desarrollo sostenible</title>
 </head>
 
 <body>
+
+    
 <div class="box-loading" id="loadingPrincipal">
     <div class="loading">
         <div class="loading1"></div>
@@ -27,7 +34,7 @@
 </div>
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo"><img src="../imagenes/Inicioimg/logoODS12.png" alt="Logo"></a>
+            <a href="#" class="nav__logo"><img src="../imagenes/Inicioimg/logoNewODS12.png" alt="Logo"></a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
@@ -116,12 +123,30 @@
         <i class="ri-close-line login__close" id="login-close"></i>
     </div>
 
+
+
+
     <section>
         <div class="contenido-principal">
             <div class="espacio"></div>
             <h1principal>Objetivos de Desarrollo Sostenible</h1principal>
         </div>
     </section>
+
+
+
+    <section class="contenedor-exterior">
+        <div class="contenedor-fechasimportantes">
+            <h2>Calendario de Fechas Importantes</h2>
+            <div class="imagen-container">
+                <i class="fas fa-calendar-alt imagen-logo"></i> <!-- Icono de calendario -->
+            </div>
+            <div id="eventodia" class="evento-box">Cargando evento del día...</div>
+        </div>
+    </section>
+    
+    
+    
 
 
     <section>
@@ -226,6 +251,7 @@
             </div>
         </div>
     </section>
+
     <section>
         <div class="titulo-ods">
             <div class="espacio"></div>
@@ -406,7 +432,7 @@
                             <li><a href="../historia.html">Historia</a></li>
                             <li><a href="../contactanos.html">Contactanos</a></li>
                             <li><a href="../producto.html">Producto</a></li>
-                            <li><a href="../ODS.html">ODS</a></li>
+                            <li><a href="../ods.html">ODS</a></li>
                         </ul>
                     </div>
                     <div class="footer-links">
@@ -449,6 +475,7 @@
     <script src="../js/FB-nav-search-login.js"></script>
     <script src="../js/script-index.js"></script>
     <script src="../js/loading.js"></script>
+    <script src="../js/calendario.js"></script>
 </body>
 
 </html>

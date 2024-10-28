@@ -1,0 +1,88 @@
+.contenido-principal {
+    text-align: center;
+    /* Centra el texto dentro del contenedor para una presentación equilibrada */
+    padding: 30px;
+    /* Agrega un espacio interno para que el contenido no se sienta apretado */
+    background-color: #f9f9f9;
+    /* Color de fondo suave para un aspecto limpio y moderno */
+    border-radius: 10px;
+    /* Bordes redondeados para darle un toque más amigable */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Añade una sombra sutil para un efecto de profundidad */
+    margin: 100px 20px;
+    /* Margen alrededor del contenedor para separarlo de otros elementos en la página */
+}
+
+/* Contenedor externo para centrar el formulario */
+.formulario-contenedor {
+    display: flex;
+    justify-content: center; /* Centra el formulario horizontalmente */
+    align-items: center; /* Centra el formulario verticalmente */
+    min-height: 5vh; /* Ocupa toda la altura de la ventana */
+    background-color: #f0f4f8; /* Fondo suave */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilo para el formulario */
+form {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 40px 30px; /* Espaciado interno */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Sombra */
+    max-width: 400px; /* Ancho máximo */
+    width: 100%; /* Ancho completo */
+    text-align: center; /* Centra el contenido */
+}
+
+/* Etiquetas de los campos de entrada */
+label {
+    display: block;
+    font-weight: 600; /* Resalta las etiquetas */
+    margin-top: 15px;
+    color: #555;
+    text-align: left; /* Alinea las etiquetas a la izquierda */
+}
+
+/* Campos de entrada */
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #f8fafb;
+    font-size: 1em;
+}
+
+/* Efecto de foco en los campos de entrada */
+input[type="number"]:focus {
+    border-color: #66bb6a;
+    outline: none;
+    background-color: #ffffff;
+}
+
+/* Botón */
+button {
+    margin-top: 25px;
+    padding: 12px 24px;
+    background-color: #66bb6a;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4caf50;
+}
+
+/* Resultado */
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #388e3c;
+}

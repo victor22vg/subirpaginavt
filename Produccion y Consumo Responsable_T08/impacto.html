@@ -22,7 +22,8 @@
 
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo"><img src="../Produccion y Consumo Responsable_T08/imagenes/Inicioimg/logoODS12.png" alt="Logo"></a>
+            <a href="#" class="nav__logo"><img
+                    src="../Produccion y Consumo Responsable_T08/imagenes/Inicioimg/logoNewODS12.png" alt="Logo"></a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
@@ -35,15 +36,19 @@
                     </li>
 
                     <li class="nav__item">
-                        <a href="../Produccion y Consumo Responsable_T08/contactanos.html" class="nav__link">Contactanos</a>
+                        <a href="../Produccion y Consumo Responsable_T08/contactanos.html"
+                            class="nav__link">Contactanos</a>
                         <ul class="menu-vertical">
-                            <li><a href="../Produccion y Consumo Responsable_T08/quienessomos.html">¿Quienes Somos?</a></li>
-                            <li><a href="../Produccion y Consumo Responsable_T08/impacto.html">¿Que impacto queremos crear?</a></li>
+                            <li><a href="../Produccion y Consumo Responsable_T08/quienessomos.html">¿Quienes Somos?</a>
+                            </li>
+                            <li><a href="../Produccion y Consumo Responsable_T08/impacto.html">¿Que impacto queremos
+                                    crear?</a></li>
                         </ul>
-                    </li>  
+                    </li>
 
                     <li class="nav__item">
-                        <a href="../Produccion y Consumo Responsable_T08/producto.html" class="nav__link">Nuestro Producto</a>
+                        <a href="../Produccion y Consumo Responsable_T08/producto.html" class="nav__link">Nuestro
+                            Producto</a>
                     </li>
 
                     <li class="nav__item">
@@ -111,63 +116,85 @@
         <i class="ri-close-line login__close" id="login-close"></i>
     </div>
 
+    <section>
+        <div class="contenido-principal">
+            <div class="espacio"></div>
+            <h1principal>¿Que impacto queremos crear?</h1principal>
+        </div>
+    </section>
+
+    <section class="formulario-contenedor">
+        <form>
+            <h3>Calcula tu Impacto Ambiental</h3>
+
+            <label for="energy">Consumo mensual de energía (kWh):</label>
+            <input type="number" id="energy" placeholder="Ej. 200">
+
+            <label for="water">Consumo mensual de agua (litros):</label>
+            <input type="number" id="water" placeholder="Ej. 5000">
+
+            <button type="button" onclick="calculateImpact()">Calcular Impacto</button>
+
+            <div id="result"></div>
+            <div id="impactEvaluation"></div>
+        </form>
+    </section>
 
 
-    
 
 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>ODS</h4>
+                    <ul>
+                        <li><a href="../Produccion y Consumo Responsable_T08/public/index.html">Inicio</a></li>
+                        <li><a href="../Produccion y Consumo Responsable_T08/historia.html">Historia</a></li>
+                        <li><a href="../Produccion y Consumo Responsable_T08/contactanos.html">Contactanos</a></li>
+                        <li><a href="../Produccion y Consumo Responsable_T08/producto.html">Producto</a></li>
+                        <li><a href="../Produccion y Consumo Responsable_T08/ods.html">ODS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>ODS</h4>
+                    <ul>
+                        <li><a href="https://www.un.org/sustainabledevelopment/es/sustainable-consumption-production/">Sobre
+                                el ODS</a></li>
+                        <li><a
+                                href="https://upload.wikimedia.org/wikipedia/commons/3/39/Sustainable_Development_Goal-es-06.jpg">Logo
+                                de la ODS</a></li>
+                    </ul>
+                </div>
 
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-row">
-                    <div class="footer-links">
-                        <h4>ODS</h4>
-                        <ul>
-                            <li><a href="index.html">Inicio</a></li>
-                            <li><a href="historia.html">Historia</a></li>
-                            <li><a href="contactanos.html">Contactanos</a></li>
-                            <li><a href="producto.html">Producto</a></li>
-                            <li><a href="ODS.html">ODS</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-links">
-                        <h4>ODS</h4>
-                        <ul>
-                            <li><a
-                                    href="https://www.un.org/sustainabledevelopment/es/sustainable-consumption-production/">Sobre
-                                    el ODS</a></li>
-                            <li><a
-                                    href="https://upload.wikimedia.org/wikipedia/commons/3/39/Sustainable_Development_Goal-es-06.jpg">Logo
-                                    de la ODS</a></li>
-                        </ul>
-                    </div>
+                <div class="footer-links">
+                    <h4>Siguenos</h4>
+                    <div class="social-link">
+                        <a href="https://www.facebook.com/tecnologiaVG" class="fab fa-facebook-f" target="_blank"
+                            title="Compartir en Facebook">
+                        </a>
 
-                    <div class="footer-links">
-                        <h4>Siguenos</h4>
-                        <div class="social-link">
-                            <a href="https://www.facebook.com/tecnologiaVG" class="fab fa-facebook-f" target="_blank"
-                                title="Compartir en Facebook">
-                            </a>
+                        <a href="https://www.instagram.com/valle_grande_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            class="fab fa-instagram" target="_blank" title="Ir a Instagram">
+                        </a>
 
-                            <a href="https://www.instagram.com/valle_grande_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                                class="fab fa-instagram" target="_blank" title="Ir a Instagram">
-                            </a>
+                        <a href="https://www.youtube.com/@vallegrande_" class="fab fa-youtube" target="_blank"
+                            title="Ir a Youtube">
+                        </a>
 
-                            <a href="https://www.youtube.com/@vallegrande_" class="fab fa-youtube" target="_blank"
-                                title="Ir a Youtube">
-                            </a>
-
-                            <a href="https://pe.linkedin.com/company/tecnologiavg" class="fab fa-linkedin"
-                                target="_blank" title="Ir a Linkedin">
-                            </a>
-                        </div>
+                        <a href="https://pe.linkedin.com/company/tecnologiavg" class="fab fa-linkedin" target="_blank"
+                            title="Ir a Linkedin">
+                        </a>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
     </section>
     <script src="js/Mostrar-OCultar.js"></script>
     <script src="../Produccion y Consumo Responsable_T08/js/FB-nav-search-login.js"></script>
+    <script src="../Produccion y Consumo Responsable_T08/js/impacto.js"></script>
+
 </body>
 
 </html>
